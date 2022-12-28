@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0333850613f4092a94fe1f60c1abc51" Name="Diagram1" ZoomLevel="84">
+        <EntityTypeShape EntityType="NOM035Model.CatNOMActividadesPreponderantes" Width="2.75" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasCategorias" Width="2.25" PointX="3.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasCuestionarios" Width="2.375" PointX="0.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasDimensiones" Width="2.375" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasDominios" Width="2.125" PointX="5.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasGuias" Width="2" PointX="5.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasPreguntas" Width="2.25" PointX="8" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMTipoCuestionarios" Width="2.25" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMTipoRespuestas" Width="2" PointX="5.375" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMUnidadesEvaluar" Width="2" PointX="7.625" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.GenCalificacionesCategoria" Width="2.125" PointX="10.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.GenCalificacionesDominio" Width="2.125" PointX="9.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.GenPasswordRecovery" Width="1.875" PointX="2.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.GenUsuarios" Width="1.5" PointX="4.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMEmpresasUnidades" Width="2.25" PointX="8.625" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMExpedienteATS" Width="2" PointX="11" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMRespuestas" Width="1.75" PointX="12" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMRespuestasReferencia5" Width="2.375" PointX="0.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatCodigosPostales" Width="1.75" PointX="13.125" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatEntidadFederativa" Width="1.875" PointX="0.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatMunicipios" Width="1.5" PointX="0.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMReferencia5" Width="1.75" PointX="10.125" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMReferencia5Respuestas" Width="2.375" PointX="12.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.GenConfiguracion" Width="2.25" PointX="2.125" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMExpedienteATSRegistros" Width="2.5" PointX="7.5" PointY="8" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMAccionesATS" Width="1.875" PointX="4.5" PointY="17.125" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEstatus" Width="1.5" PointX="6.5" PointY="17.125" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomOcupaciones" Width="1.75" PointX="9.875" PointY="17.125" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMConceptosCobro" Width="1.5" PointX="14.375" PointY="7.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMPeriodoEvaluacion" Width="1.5" PointX="15.375" PointY="10.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMComprobantes" Width="1.5" PointX="16.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NOM035Model.GenCobros" Width="1.5" PointX="15.375" PointY="13.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMAvisos" Width="1.5" PointX="14.375" PointY="3.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMProcesosCuestionarios" Width="1.5" PointX="16.375" PointY="3.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMEmpresasAsignadas" Width="1.5" PointX="14.375" PointY="17.75" />
+        <EntityTypeShape EntityType="NOM035Model.GenMensajeria" Width="1.5" PointX="19.375" PointY="13.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomTemas" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomTemasCuestionarios" Width="1.5" PointX="18.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NOM035Model.OPEWatchEnvios" Width="1.5" PointX="14.375" PointY="20.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomCursosCategorias" Width="1.5" PointX="17.375" PointY="16.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMCursosTipo" Width="1.5" PointX="19.375" PointY="9.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMCursos" Width="1.5" PointX="9.375" PointY="19.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMCursoUnidad" Width="1.5" PointX="11.375" PointY="19.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMVisualizaciones" Width="1.5" PointX="19.375" PointY="16.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomDepartamento" Width="1.5" PointX="20.375" PointY="20.75" />
+        <EntityTypeShape EntityType="NOM035Model.GenPinAccesos" Width="1.5" PointX="21.375" PointY="12.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomCursos" Width="1.5" PointX="22.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomCursosAsignados" Width="2.25" PointX="11.375" PointY="22.75" />
+        <EntityTypeShape EntityType="NOM035Model.GenPinEnumerador" Width="1.5" PointX="16.375" PointY="7.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomCursosCorreos" Width="1.5" PointX="21.375" PointY="9.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMGraficasFrecuencias" Width="1.5" PointX="7.375" PointY="23.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMEncuestasCategoriasAnotaciones" Width="1.5" PointX="22.375" PointY="6.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNomCursosVisualizaciones" Width="1.5" PointX="16.375" PointY="19.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMAvanceUsuarios" Width="1.5" PointX="7.375" PointY="23.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMObservacionesCategorias" Width="1.5" PointX="5.375" PointY="19.75" />
+        <EntityTypeShape EntityType="NOM035Model.CatNOMObservacionesDominios" Width="1.5" PointX="23.375" PointY="9.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMEncuestas" Width="1.5" PointX="3.375" PointY="23.75" />
+        <EntityTypeShape EntityType="NOM035Model.OpeNOMEmpresas" Width="1.5" PointX="18.375" PointY="23.75" />
+        <EntityTypeShape EntityType="NOM035Model.GenUsuariosRoles" Width="1.5" PointX="22.375" PointY="16.75" />
+        <EntityTypeShape EntityType="NOM035Model.ViewEmprezasLigadasANodriza" Width="1.5" PointX="22.375" PointY="21.75" />
+        <EntityTypeShape EntityType="NOM035Model.VistaPreguntas" Width="1.5" PointX="24.375" PointY="0.75" />
+        <EntityTypeShape EntityType="NOM035Model.VistaPreguntasReferencia5" Width="1.5" PointX="24.375" PointY="13.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

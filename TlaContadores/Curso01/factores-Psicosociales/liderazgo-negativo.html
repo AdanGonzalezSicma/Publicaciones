@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Minom035</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="../css/scrolling-nav.css" rel="stylesheet">
+        <link href="../css/media-queries.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="../../index.html"><img src="../img/GrupoCreativo.png" style="width:200px"></a>
+    
+    
+            </div>
+        </nav>
+
+    <header class="headerCurso">
+        <div class="container text-center">
+            <h1>
+                Factores de Riesgo
+                Psicosocial en el trabajo
+                
+                
+            </h1>
+
+        </div>
+    </header>
+
+    <section id="about" class="about2">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-lg-4 mx-auto text-center">
+                    <br>
+                    <br>
+                    <h2 >6. Liderazgo negativo y relaciones negativas en el trabajo
+
+
+                    </h2>
+                    
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <br>
+                            <audio id="miAudio" src="../img/modulo4.mpeg" ></audio>
+                  
+                  
+                  
+                            <div id="botones" style="background-color: rgba(204, 204, 206, 0.651); border-radius: 50px;">
+                              <button onclick="setHalfVolume()" type="button"> <img src="../img/volume-menos-icon.png"
+                                  style="width: 150%;"></button>
+                              <button id="iniciar" onclick="iniciar()"><img src="../img/Play.ico" style="width: 150%;"></button>
+                              <button onclick="setFullVolume()" type="button"> <img src="../img/volume-icon.png"
+                                  style="width: 150%;"></button>
+                              <button id="reiniciar" onclick="reiniciar()"><img src="../img/Undo.ico" style="width: 150%;"></button>
+                            </div>
+                  
+                          </div>
+                    </div>
+
+                    <br>
+                    <a href="../Factores-psicosociales-en-el-trabajo2.html" class="btn btn-info btn-lg btn-atr" >Regresar</a>
+                    <br>
+                    <br>
+
+                </div>
+                <br>
+                <br>
+                <div class="col-lg-8 mx-auto text-right">
+
+                    <img src="../img/liderazgo-negativo.jpeg" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+
+
+
+           
+
+
+
+
+        </div>
+
+
+
+    </section>
+    <script>
+        var miAudio = document.getElementById("miAudio");
+var vid = document.getElementById("miAudio");
+var interval;
+
+function iniciar() {
+  if (miAudio.paused) {
+    // iniciamos
+    miAudio.play();
+
+    document.getElementById("iniciar").innerHTML = "<img src=../img/Pause.ico style=width:150%>";
+  } else {
+    // paramos
+    miAudio.pause();
+
+    document.getElementById("iniciar").innerHTML = "<img src=../img/Play.ico style=width:150%>";
+  }
+}
+
+function reiniciar() {
+  // nos posicionamos al inicio de la cancion
+  miAudio.currentTime = 0;
+  if (miAudio.paused) {
+    miAudio.play();
+    document.getElementById("iniciar").innerHTML = "<img src=../img/Pause.ico style=width:150%>";
+  }
+}
+function setHalfVolume() {
+  vid.volume = 0.2;
+}
+
+function setFullVolume() {
+  vid.volume = 1.0;
+}
+
+    </script>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" style="display: none;">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; <a href="http://www.sicmacontroles.mx/"
+                    style="color: white;">Sicmacontroles.mx</a> </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="../js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

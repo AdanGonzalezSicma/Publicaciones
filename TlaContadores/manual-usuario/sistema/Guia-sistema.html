@@ -1,0 +1,1633 @@
+﻿<!DOCTYPE html>
+
+<html class="wide wow-animation" lang="en">
+
+<head>
+    <title>NOM-035</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/nom.png" type="image/x-icon">
+    <!-- Stylesheets-->
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+        /*Clase para manipular el color de la barra superior*/
+        .section-banner {
+            background: #00367c;
+        }
+        /*Clase para manipular el color de fondo, borde y letra de los botones*/
+        .button-primary, .button-primary {
+            background-color: #548cde;
+            border-color: #548cde;
+            color: #fff !important
+        }
+            /*Clase para manipular el color de fondo, borde y letra de los botones en hover*/
+            .button-primary.button-ujarak::before {
+                color: #ffffff;
+                background-color: #151515;
+                border-color: #151515;
+            }
+
+        /*Clases para manipular el color de letra del card*/
+        .card-body {
+            color: #045fac;
+        }
+
+            .card-body h4, h3 {
+                color: #045fac;
+            }
+
+        .card-header {
+            background-color: #045fac;
+            color: white
+        }
+        /*clase para cambiar el color de letra del banner superior*/
+        .section-banner h5, h3 {
+            color: white
+        }
+        /*clase para cambiar el color del borde del banner superior*/
+        .borde {
+            border-right: 3px solid #548cde;
+        }
+        /*clase para cambiar el color de fondo del banner superior*/
+        .Titulo-header {
+            background: rgb(248,128,23);
+            background: linear-gradient(100deg,#548cde, #045fac);
+        }
+            /*clase para cambiar el color de letra del banner superior*/
+            .Titulo-header h3 {
+                text-shadow: 3px 3px 2px black;
+                color: #fff !important;
+                padding: 40px;
+                text-transform: none
+            }
+
+        .titulos {
+            color: #045fac
+        }
+
+        b {
+            color: #045fac
+        }
+
+        .seccion-importante {
+            background-color: #045fac;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important
+        }
+
+            .seccion-importante p {
+                color: white;
+                padding: 30px;
+                font-size: 20px;
+                text-shadow: 2px 2px 2px gray;
+                color: #fff !important
+            }
+
+        a {
+            color: #26cbc7 !important
+        }
+
+        .rd-navbar-static .rd-nav-link {
+            color: #045fac !important
+        }
+
+            .rd-navbar-static .rd-nav-link .active {
+                color: #26cbc7 !important
+            }
+
+        .rd-navbar-classic.rd-navbar-static .rd-nav-link::before {
+            color: #26cbc7 !important
+        }
+
+        .tabs-horizontal.tabs-line .nav-tabs {
+            justify-content: space-between;
+            border-bottom: 3px solid #26cbc7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ie-panel">
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+            <img src="../#" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+        </a>
+    </div>
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div id="home">
+
+            <!-- Top Banner-->
+            <div class="container-fluid section section-banner text-center d-none d-xl-block">
+                <div class="row text-center" style="padding:0.5%">
+                    <div class="col-lg-4 col-md-5 borde"><h3 style="font-size:25px;"> ¡Plataforma NOM-035!</h3></div>
+                    <div class="col-lg-5 col-md-5  borde"><h5 style="text-transform:none;">Para cumplir paso a paso con la implementación de la NOM-035</h5></div>
+                    <div class="col-lg-3 col-md-2"><button class="button button-primary button-ujarak" style="padding: 10px 23px 10px!important; min-width:100px"> Salir</button></div>
+                </div>
+            </div>
+            <!-- Page Header-->
+            <header class="section page-header">
+                <!-- RD Navbar-->
+                <div class="rd-navbar-wrap">
+                    <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+                         data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+                         data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+                         data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+                         data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+                         data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                        <div class="rd-navbar-main-outer">
+                            <div class="rd-navbar-main">
+                                <!-- RD Navbar Panel-->
+                                <div class="rd-navbar-panel">
+                                    <!-- RD Navbar Toggle-->
+                                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                                    <!-- RD Navbar Brand-->
+                                    <div class="rd-navbar-brand">
+                                        <a class="brand" href="/index.html">
+                                            <img src="/Content/img/nom.png"
+                                                 alt="" width="223" height="50" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="rd-navbar-main-element">
+                                    <div class="rd-navbar-nav-wrap">
+                                        <!-- RD Navbar Share-->
+                                        <!--<ul class="rd-navbar-nav">
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#paso1" style="font-size:25px">Paso 1</a></li>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#paso2" style="font-size:25px">Paso 2</a></li>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#paso3" style="font-size:25px">Paso 3</a></li>-->
+                                        <!--<%--
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#paso4" style="font-size:25px">Paso 4</a></li>--%>-->
+                                        <!--</ul>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section>
+                <div class="container-fluid Titulo-header">
+                    <div class="row">
+                        <div class="col-md-12 col-12 col-sm-12 col-lg-12">
+                            <h3 data-caption-animate="fadeInLeft" data-caption-delay="0">
+                                Guía de usuario del sistema de la <br /> NOM-035
+                            </h3>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+
+        <div></div>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso1">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style="text-transform:none">Menú del sistema: Opciones del menú </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al ingresar al sistema de la NOM 035 nos encontramos con un menú lateral donde se encuentran las siguientes opciones que se desglosaran más adelante:
+                                        </p>
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                            <li style="font-size:18px"><b>•</b>	Resultados</li>
+                                            <li style="font-size:18px"><b>•</b>	Encuestas</li>
+                                            <li style="font-size:18px"><b>•</b>	Reportes</li>
+                                            <li style="font-size:18px"><b>•</b> Expedientes ATS</li>
+                                            <li style="font-size:18px"><b>•</b> Constancias DC-3</li>
+                                            <li style="font-size:18px"><b>•</b> Centros de Trabajo</li>
+                                            <li style="font-size:18px"><b>•</b> Plan de Capacitación</li>
+                                            <li style="font-size:18px"><b>•</b> Cursos</li>
+                                            <li style="font-size:18px"><b>•</b> Guías de Usuario</li>
+                                        </ul>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../cuestionarios/images/menu.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+
+                                        <br />
+                                        <div class="row">
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                            <div class=" col-lg-6 col-sm-12 text-center">
+                                                <p style="font-size:18px">Para dirigirse a esta opción</p>
+                                                <a href="/Default.aspx" class="button button-primary button-ujarak " style="width:100%"> de clic aquí</a>
+                                            </div>
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso2">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style="text-transform:none">Menú del sistema: Resultados</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La primera opción que encontrará en el menú será RESULTADOS, en esta sección se desglosará un submenú con las siguientes opciones:
+                                        </p>
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                            <li style="font-size:18px"><b>•</b>	Gráficos por Frecuencia</li>
+                                            <li style="font-size:18px"><b>•</b> Observaciones Categorías</li>
+                                            <li style="font-size:18px"><b>•</b> Observaciones Dominio</li>
+                                            <li style="font-size:18px"><b>•</b> Encuestas Guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Encuestas Guía ll/lll</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía ll/lll</li>
+
+                                            <li style="font-size:18px"><b>•</b> Encuesta Guía V</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle Guía V</li>
+                                        </ul>
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/menu-resultados.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+                                        <div class="row">
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                            <div class=" col-lg-6 col-sm-12 text-center">
+                                                <p style="font-size:18px">Para dirigirse a esta opción</p>
+                                                <a href="https://tlacontadores.com/Cuestionarios/Acceso.aspx?company=pruebac" class="button button-primary button-ujarak " style="width:100%"> de clic aquí</a>
+                                            </div>
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso3">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados-Gráficos por Frecuencia </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al ingresar a la opción de Gráficos por frecuencia nos mostrará una página donde se verán reflejados los resultados de las encuestas que el usuario empresa ha aplicado a sus trabajadores.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Lo primero que notará son 4 secciones, el primer recuadro que es de color azul trata sobre el total de centros de trabajo en donde se aplicaron las encuestas.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            El segundo recuadro es de evaluaciones, los datos que muestra son las evaluaciones totales, las iniciadas, terminadas, pendientes totales y pendientes por cada guía.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            El tercero trata sobre la puntuación promedio, aquí mostrara la puntuación en promedio de cada guía, esto con la finalidad de determinar los factores de riesgo y los acontecimientos traumáticos de los empleados.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            El ultimo, pero no menos importante recuadro es el de Acontecimientos Traumáticos, aquí mostrará el número de empleados que han sufrido algún acontecimiento traumático, para así poderle dar seguimiento a los casos.
+                                        </p>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultados.jpg" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            Después de esa sección, hay dos combo-box, el primero que es de todos los centros de trabajo y el segundo de todas las áreas de trabajo,
+                                            estos sirven para poder filtrar la información de los gráficos y centrarnos en las áreas o centros de trabajo que sean del mayor interés
+                                            o de mayor urgencia, una vez seleccionado el centro de trabajo y/o el área, procedemos a dar clic al botón de filtrar y en automático nos
+                                            mostrará solo los resultados de esa selección.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            También está disponible el botón de reporte, en donde podemos imprimir el reporte ya sea de todos los resultados o de la información ya filtrada.
+                                        </p>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultados-Bfiltrar.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            La siguiente sección nos muestra los gráficos resultados por categorías, estas se dividen en 5, las cuales son:
+                                        </p>
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                            <li style="font-size:18px"><b>•</b>	Ambiente de trabajo</li>
+                                            <li style="font-size:18px"><b>•</b> Factores propios de la Actividad</li>
+                                            <li style="font-size:18px"><b>•</b> Organización del tiempo de trabajo</li>
+                                            <li style="font-size:18px"><b>•</b> Liderazgo y relaciones en el trabajo</li>
+                                            <li style="font-size:18px"><b>•</b> Entorno organizacional</li>
+                                            <!--<li style="font-size:18px"><b>•</b> Falta de control sobre el trabajo</li>
+                                        <li style="font-size:18px"><b>•</b> sin categoría</li>-->
+
+
+                                        </ul>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultadosCategoria.jpg" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            En este apartado, también se pueden añadir pequeñas observaciones de cada categoría dándole clic a la gráfica en la que necesite dicha observación.
+                                        </p>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultadosObservaciones.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            Después de la sección anterior, nos muestra la sección de Resultados por Dominio, esta funciona igual que la de categoría, solo que se divide por 10 dominios, los cuales son:
+                                        </p>
+                                        <br />
+
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/dominio.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            En este apartado, también se pueden añadir pequeñas observaciones de cada Dominio dándole clic a la gráfica en la que necesite dicha observación.
+                                        </p>
+                                        <br />
+
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/dominioObserv.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            En la última sección, se muestran los resultados por dimensión, estos se dividen en 26 y es donde se miden los resultados de dimensión de cada encuesta.
+                                        </p>
+                                        <br />
+
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/dimension.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso4">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Observación por Categoría</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La segunda opción del submenú de resultados son las observaciones por categorías,
+                                            ahí se mostrarán las observaciones que se han agregado a los gráficos en la sección pasada.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se podrán editar y eliminar las observaciones mas no agregar nuevas, eso se hace en los gráficos.
+                                        </p>
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ObservCategoria.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso5">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Observación por Dominio </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La tercera opción del submenú de resultados al igual que la sección pasada son las observaciones,
+                                            pero en este caso son por dominio, ahí se mostrarán las observaciones que se han agregado a los gráficos en la sección pasada.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se podrán editar y eliminar las observaciones mas no agregar nuevas, eso se hace en los gráficos.
+                                        </p>
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ObservDominio.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso2">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style="text-transform:none">Menú del sistema: Encuestas</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La Siguiente opción que encontrará en el menú será Encuestas, en esta sección se desglosará un submenú con las siguientes opciones:
+                                        </p>
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+                                            <li style="font-size:18px"><b>•</b> Encuestas Guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Encuestas Guía ll/lll</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía ll/lll</li>
+
+                                            <li style="font-size:18px"><b>•</b> Encuesta Guía V</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle Guía V</li>
+                                        </ul>
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultados-Encuesta.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso6">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Encuestas Guía I </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se reflejan las encuestas que han sido iniciadas, así como su avance por la aplicación.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al inicio aparecen 3 botones, el primero es el botón de editar,
+                                            este botón sirve solo para agregar los datos del empleado,<b> esto es necesario para otorgar la constancia DC-3.</b>
+                                        </p>
+
+
+
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                            <img src="../Cuestionarios/images/Encuesta-guia1.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                        </div>
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                            <img src="../Cuestionarios/images/Encuesta-guia1Editar.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <p class="text-justify" style="font-size:18px">
+                                El segundo botón es el de reporte de respuestas, al darle clic nos abrirá una página
+                                emergente en donde se mostrará el reporte con las respuestas de la encuesta que se ha seleccionado.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                            <img src="../Cuestionarios/images/Encuesta-guia1Reporte.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                        </div>
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                            <img src="../Cuestionarios/images/Encuesta-guia1Reporte2.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <p class="text-justify" style="font-size:18px">
+                                En el reporte se muestran las respuestas ya sean de la guía l, ll, lll y V, únicamente si ya han sido contestadas.
+                            </p>
+                            <p class="text-justify" style="font-size:18px">
+                                El tercer botón al igual que el segundo es sobre el reporte, pero ahora sobre la guía y no sobre las respuestas,
+                                ahí se reflejará la puntuación total de la guía para determinar las medidas que hay que tomar respecto a los temas donde haya más riesgo.
+                            </p>
+                            <br />
+                            <div class="text-center">
+                                <img src="../Cuestionarios/images/Encuesta-guia1Reporteguia.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                            <br />
+                            <p class="text-justify" style="font-size:18px">
+                                Al final del reporte, aparecen las puntuaciones en las cuales nos basamos para calificar cada resultado de la encuesta.
+                            </p>
+                            <br />
+                            <div class="text-center">
+                                <img src="../Cuestionarios/images/Encuesta-guia1ReporteguiaR.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                            <br />
+                            <p class="text-justify" style="font-size:18px">
+                                En la sección de abajo se muestra un grid donde se ven reflejadas todas las encuestas
+                                que han sido iniciadas, los datos que se muestran son los siguientes:
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                        <li style="font-size:18px"><b>•</b>	Centro de trabajo</li>
+                                        <li style="font-size:18px"><b>•</b> Núm. De Encuesta</li>
+                                        <li style="font-size:18px"><b>•</b> Núm. De Accesos</li>
+                                        <li style="font-size:18px"><b>•</b> Fecha de Inicio</li>
+                                        <li style="font-size:18px"><b>•</b> Ultimo Ingreso</li>
+                                        <li style="font-size:18px"><b>•</b> Fecha de Finalización</li>
+                                        <li style="font-size:18px"><b>•</b> Empleado</li>
+                                        <li style="font-size:18px"><b>•</b> Puesto</li>
+                                        <li style="font-size:18px"><b>•</b> Departamento</li>
+
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 1 parte 1</li>
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 1 parte 2</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                        <li style="font-size:18px"><b>•</b> Curp</li>
+                                        <li style="font-size:18px"><b>•</b> Sensibilización de trabajadores</li>
+                                        <li style="font-size:18px"><b>•</b> Sensibilización directivos</li>
+                                        <li style="font-size:18px"><b>•</b> Guía l</li>
+                                        <li style="font-size:18px"><b>•</b> Guía ll</li>
+                                        <li style="font-size:18px"><b>•</b> Guía lll</li>
+                                        <li style="font-size:18px"><b>•</b> Guía V</li>
+
+                                        <li style="font-size:18px"><b>•</b>	Descarga de constancia</li>
+                                        <li style="font-size:18px"><b>•</b> Primer video de sensibilización</li>
+
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 1 parte 3</li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+                                        <li style="font-size:18px"><b>•</b> Segundo video sensibilización de 1 a 15</li>
+                                        <li style="font-size:18px"><b>•</b> Segundo video sensibilización de 6 a 50</li>
+                                        <li style="font-size:18px"><b>•</b> Segundo video sensibilización de 51 o más</li>
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 2 parte 1</li>
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 2 parte 2</li>
+                                        <li style="font-size:18px"><b>•</b> Retroalimentación 2 parte 3</li>
+                                        <li style="font-size:18px"><b>•</b> Ocupación</li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="text-center">
+                                <img src="../Cuestionarios/images/Encuesta-guia1.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                            <br />
+                            <p class="text-justify" style="font-size:18px">
+                                <b> Nota: para desplegar las otras opciones, solo damos clic en los tres puntos al final de las columnas</b><br />
+                                Y se mostrarán de la siguiente manera:
+                            </p>
+                            <br />
+                            <div class="text-center">
+                                <img src="../Cuestionarios/images/Encuesta-guia1gridDesglose.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                            <br />
+                            <p class="text-justify" style="font-size:18px">
+                                También podemos filtrar la información para hacer más eficiente la búsqueda de alguna encuesta, ya sea por centro de trabajo,
+                                numero de encuesta, etc. Lo único que se tiene que hacer es arrastrar a la parte de arriba en donde dice: “Arrastre una columna
+                                aquí para agrupar por dicha columna” el nombre, por ejemplo: centro de trabajo y se filtrará en automático.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                            <img src="../Cuestionarios/images/Encuesta-guia1gridfiltro.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                        </div>
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                            <img src="../Cuestionarios/images/Encuesta-guia1gridfiltro2.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso7">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Resultados a Detalle Guía I</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se muestra a detalle la guía l, los datos que aparecen son los siguientes:
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                                    <li style="font-size:18px"><b>•</b> Centro de trabajo</li>
+                                                    <li style="font-size:18px"><b>•</b> Actividad principal</li>
+                                                    <li style="font-size:18px"><b>•</b> Núm. De Encuesta</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Guía</li>
+                                                    <li style="font-size:18px"><b>•</b> Categoría</li>
+                                                    <li style="font-size:18px"><b>•</b> Dominio</li>
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Dimensión</li>
+                                                    <li style="font-size:18px"><b>•</b> Pregunta</li>
+                                                    <li style="font-size:18px"><b>•</b> Respuesta</li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ResultadoDetalleGuia1.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso8">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Encuestas Guía Il/lll</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se reflejan las encuestas que han sido iniciadas tanto de la guía l como del ll/lll, así como su avance por la aplicación.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al igual que en la página de encuesta de la guía l, esta funciona de la misma manera, solo que aquí se muestran las primeras 3 guías.
+                                        </p>
+
+
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ResultadosEncuestaGuia2-3.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px"><b>Nota: También podemos editar, ver los reportes, filtrar, etc.</b></p>
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso9">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Resultados a Detalle Guía Il/lll</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página al igual que la de la guía l, se muestra a detalle la guía ll/lll, los datos que aparecen son los siguientes:
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                                    <li style="font-size:18px"><b>•</b> Centro de trabajo</li>
+                                                    <li style="font-size:18px"><b>•</b> Actividad principal</li>
+                                                    <li style="font-size:18px"><b>•</b> Núm. De Encuesta</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Guía</li>
+                                                    <li style="font-size:18px"><b>•</b> Categoría</li>
+                                                    <li style="font-size:18px"><b>•</b> Dominio</li>
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Dimensión</li>
+                                                    <li style="font-size:18px"><b>•</b> Pregunta</li>
+                                                    <li style="font-size:18px"><b>•</b> Respuesta</li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ResultadosDetalleGuía2-3.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso10">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Encuestas Guía V</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta sección se reflejan las encuestas que han sido iniciadas tanto de la guía l como del ll/lll y de la guía V, así como su avance por la aplicación.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al igual que en las otras páginas de encuestas de la guía l y ll/lll, esta funciona de la misma manera, solo que aquí se muestran las primeras 3 guías más la V.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px"><b>Nota: También podemos editar, ver los reportes, filtrar, etc.</b></p>
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/Encuestasguia5.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso11">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Resultados a Detalle Guía V</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página al igual que la de las otras guías, se muestra a detalle la guía V, los datos que aparecen son los siguientes:
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                                    <li style="font-size:18px"><b>•</b> Centro de trabajo</li>
+                                                    <li style="font-size:18px"><b>•</b> Actividad principal</li>
+                                                    <li style="font-size:18px"><b>•</b> Núm. De Encuesta</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Guía</li>
+                                                    <li style="font-size:18px"><b>•</b> Categoría</li>
+                                                    <li style="font-size:18px"><b>•</b> Dominio</li>
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul style="list-style:lower-alpha!important; padding-left:30px">
+
+
+
+
+                                                    <li style="font-size:18px"><b>•</b> Dimensión</li>
+                                                    <li style="font-size:18px"><b>•</b> Pregunta</li>
+                                                    <li style="font-size:18px"><b>•</b> Respuesta</li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ResultadosDetalleGuía5.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="Reportes">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Reportes de evaluación</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página aparecerán las encuestas de la guía II y III. <br />
+                                            Al principio se muestran 3 botones, el primero es el de “reporte de respuestas”, al darle clic nos abrirá una página emergente en donde se mostrará el reporte con las respuestas de la encuesta que se ha seleccionado.
+
+                                        </p>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                        <img src="../Cuestionarios/images/reporte-evaluacion.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                    </div>
+                    <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                        <img src="../Cuestionarios/images/reporte-evaluacion-emergente.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                    </div>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <p class="text-justify" style="font-size:18px">
+                            En el reporte se muestran las respuestas ya sean de la guía  ll y lll, únicamente si ya han sido contestadas.
+
+
+                        </p>
+                        <img src="../Cuestionarios/images/Encuesta-guia1Reporte2.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        <p class="text-justify" style="font-size:18px">El segundo botón al igual que el primero es sobre el reporte, pero ahora sobre la guía y no sobre las respuestas, ahí se reflejará la puntuación total de la guía para determinar las medidas que hay que tomar respecto a los temas donde haya más riesgo.</p>
+                        <img src="../Cuestionarios/images/Encuesta-guia1Reporteguia.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        <p class="text-justify" style="font-size:18px"> El tercer botón es para descargar los reportes que hemos seleccionado, esto se hace marcando la casilla que está al principio de cada renglón en el grid, una vez seleccionadas las encuestas, procedemos a darle clic al botón y nos aparecerá una pequeña ventana donde te explica lo que ocurrirá si damos clic al botón de “descargar reportes”.</p>
+                    </div>
+                </div>
+                <br />
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                        <img src="../Cuestionarios/images/reporte-evaluacion-emergente-check.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                    </div>
+                    <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                        <img src="../Cuestionarios/images/reporte-evaluacion-emergente-check-descargar.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="container">
+                    <div class="row">
+                        <p class="text-justify" style="font-size:18px">Una vez que hemos dado clic al botón, se nos descargará un archivo .zip llamado “cuestionarios.zip”, que contendrá todos los reportes que seleccionamos previamente.<br /></p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <img src="../Cuestionarios/images/reporte-evaluacion-emergente-check-descargar-zip.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="ConstanciaDC3">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Constancias DC-3</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En la página de Constancias DC-3 se reflejarán solo las encuestas en las que se puede generar la constancia.<br />
+                                            Los datos que aparecerán son los siguientes:
+                                        </p>
+
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                            <li style="font-size:18px"><b>•</b> Empleado</li>
+                                            <li style="font-size:18px"><b>•</b> Curp</li>
+                                            <li style="font-size:18px"><b>•</b> Puesto</li>
+                                            <li style="font-size:18px"><b>•</b> Ocupación</li>
+                                            <li style="font-size:18px"><b>•</b> Núm. Encuesta</li>
+                                        </ul>
+
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            <b>Nota: Estos datos ya se han agregado en la página de las guías l, ll/lll y V en el botón de editar.</b>
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">Damos clic al botón de constancia para generar la que hemos seleccionado y proceder a imprimirla.</p>
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ConstanciaDC3.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="ExpedientesATS">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Expedientes ATS</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En la página de los expedientes ATS se ven reflejados todos los acontecimientos traumáticos que se han detectado en la aplicación de la nom 035
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">Al principio de la página aparecen 4 botones, el primero es el de editar, aquí se puede modificar el folio, el estatus, la observación, la fecha de activo y termino</p>
+
+
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                            <img src="../Cuestionarios/images/expedientesATS.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                        </div>
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                            <img src="../Cuestionarios/images/expedientesATSEditar.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                    </div>
+                    <div class="container">
+                        <p class="text-justify" style="font-size:18px">
+                            El segundo botón es el de eliminar, con el podemos eliminar los acontecimientos traumáticos registrados.<br />
+                            El tercer botón es el de registro, ahí se agregan las medidas de seguimiento sobre los acontecimientos traumáticos detectados, el diagnóstico y las recomendaciones para cada caso.
+                        </p>
+                        <br />
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/ATSRegistro.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+                        <p class="text-justify" style="font-size:18px">
+                            <b> Nota: También podemos editar y eliminar los registros.</b><br />
+                            El último botón es el de Reporte, ahí se crea un archivo detallando el acontecimiento traumático, los datos del trabajador,
+                            la fecha, los antecedentes, los involucrados, observaciones de la empresa y las acciones que se realizaron.
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="CentrosTrabajo">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Centros de trabajo</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Los centros de trabajo son aquellas unidades de ventas, de producción o administrativas que
+                                            FISICAMENTE se diferencian entre sí, por ejemplo; sucursales, oficinas corporativas, centros
+                                            de ventas o de distribución, campos agrícolas, ranchos, minas, granjas de producción avícola,
+                                            acuícolas, colegios, campus universitarios, fabricas, y podríamos mencionar más ejemplos, pero
+                                            cada CENTRO DE TRABAJO es una unidad que físicamente se identifica por separado una de otra.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta sección se pueden agregar, editar y eliminar tantos centros de trabajo como se necesite,
+                                            además de poder agregar, editar y eliminar los departamentos que contiene cada centro.
+                                        </p>
+
+
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+                            <img src="../Cuestionarios/images/CentroTrabajo.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+
+                        </div>
+                        <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+
+                            <img src="../Cuestionarios/images/CentroTrabajoDepartamento.png" style="width:90%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso15" style="display:none">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Plan de capacitación</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta sección se darán de alta los cursos y capacitaciones
+                                            para los empleados de los centros de trabajo, estos cursos
+                                            solamente se agregan por medio de la empresa matriz y dependen
+                                            de los resultados de la aplicación.
+                                        </p>
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/PlanCapacitacion.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <br />
+        <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="/js/core.min.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- coded by Himic-->
+</body>
+
+</html>

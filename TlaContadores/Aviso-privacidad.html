@@ -1,0 +1,539 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TLA Contadores</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/demo/logo-icon.png">
+    <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/pagina/bootstrap.css" rel="stylesheet" />
+    <script src="css/pagina/js/popper.min.js"></script>
+    <script src="css/pagina/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="css/pagina/js/bootstrap.min.js"></script>
+    <script src="css/pagina/js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link href="css/menu.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="loader text-center">
+        <div class="loader2">
+            <img src="/images/load.gif" style="width:100px;" />
+            <p style="font-size:20px;color:#424242">Cargando...</p>
+        </div>
+
+    </div>
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: 50% 50% no-repeat rgb(249,249,249);
+            opacity: .9;
+        }
+
+        .loader2 {
+            position: fixed;
+            left: 0px;
+            top: 44%;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+    </style>
+    <div class="wrapper row0">
+        <div class="container-fluid section section-banner text-center d-xl-block bannersup">
+
+            <div class="row text-center" style="padding:0.5%; margin-top:0px!important">
+                <div class="col-lg-4 col-md-5 borde"><h3 style="color:white"> ¡Plataforma Nom-035!</h3></div>
+                <div class="col-lg-5 col-md-5  borde"><h5 style="text-transform:none;color:white">Para cumplir paso a paso con la implementación de la NOM-035</h5></div>
+                <div class="col-lg-3 col-md-2"><a href="Cuenta/Registro.aspx" class="btn btn-bannersup" style=" min-width:90px"> Iniciar Ahora</a></div>
+            </div>
+        </div>
+        <header id="header" class="clear" style="margin-left:20px">
+            <!-- ################################################################################################ -->
+            <div id="logo" class="one_quarter first">
+                <h1 class="logoname clear"><a href="index.html"><img src="images/demo/logo.png" style="width: 70%;"></a></h1>
+
+            </div>
+            <div class="three_quarter">
+                <ul class="nospace clear">
+                    <li class="one_quarter first">
+                        <div class="block clear">
+                            <a href="tel:+6622145772" style="text-decoration:none; color:#474747;">
+                                <i class="fas fa-phone"></i>
+                                <span><strong>Teléfono:</strong>(662) 214-5772</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="one_quarter">
+                        <div class="block clear">
+                            <a href="mailto:contacto@tlacontadores.com?bcc=ymeldaleyva@tlacontadores.com&Subject=Solicitud%20de%20Información" style="text-decoration:none; color:#474747;">
+                                <i class="fas fa-envelope"></i>
+                                <span><strong>Email:</strong> contacto@tlacontadores.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="one_quarter">
+                        <div class="block clear">
+                            <a href="#" style="text-decoration:none; color:#474747; ">
+                                <i class="fas fa-clock"></i><span>
+                                    <strong>
+                                        Lun. - Sab.:
+                                    </strong> 08.00am - 18.00pm
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="one_quarter">
+                        <div class="block clear">
+                            <a href="#"><i class="fas fa-map-marker-alt"></i></a> <span>
+                                <strong>
+                                    Dirección:
+                                </strong> Blvr. Kino 315, Suite 1009, Piso 10
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- ################################################################################################ -->
+        </header>
+    </div>
+    <style>
+
+        @media screen and (max-width: 850px) {
+            .navbar {
+                display: none !important;
+            }
+        }
+
+        .dropdown-menu.show {
+            display: inline !important;
+        }
+
+        .dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
+            right: auto;
+            bottom: auto;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: -8px !important;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            /* float: left; */
+            min-width: 100%;
+            padding: 0rem 0 !important;
+            margin: 0rem 0 0 !important;
+            font-size: 1rem;
+            color: #888888;
+            text-align: center;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            /* margin: 0; */
+        }
+
+        .dropdown-menu li {
+            display: inline-block !important
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-lg-end row1 ">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <!-- Brand/logo -->
+
+
+            <ul class="navbar-nav justify-content-center">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><b>Inicio</b><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html"><b>Nosotros</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html"><b>Servicios</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Plataforma.html"><b>Plataforma</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Nom035.html"><b>NOM 035</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#alianzas"><b>Alianzas</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacto.aspx"><b>Contacto</b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Cuestionarios/Acceso.aspx?company=TLACONTADORES" class="btn my-2 my-sm-0 btn-cuestionario" type="submit"> <i class="fas fa-file-alt" style="font-size:15px!important"></i>  Aplicar Cuestionarios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Cuenta/Login.aspx" class="btn  my-2 my-sm-0 btn-Iniciar" type="submit"> <i class="fas fa-user" style="font-size:15px!important"></i>  Iniciar Sesión</a>
+                </li>
+            </ul>
+
+            <!--<form class="form-inline my-2 my-lg-0">
+
+
+            </form>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="/Cuenta/Login.aspx" class="btn btn-outline-secondary my-2 my-sm-0 btn-Iniciar" type="submit"> <i class="fas fa-user"></i>  Iniciar Sesión</a>
+
+            </form>-->
+        </div>
+    </nav>
+    <div class="menu-container">
+
+        <div class="menu" id="menu">
+
+            <input type="radio" id="radio-0" name="menu" />
+            <label class="tab" for="radio-0">
+                <div class="item">
+                    <a href="/index.html" class="menum">
+                        <i class="fas fa-home fa-2x"></i>
+                        <div class="item-title">Inicio</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-1" name="menu" />
+            <label class="tab" for="radio-1">
+                <div class="item">
+                    <a href="/Plataforma.html" class="menum">
+                        <i class="fas fa-mobile fa-2x"></i>
+                        <div class="item-title">Plataforma</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-2" name="menu" />
+            <label class="tab" for="radio-2">
+                <div class="item">
+                    <a href="/Cuestionarios/Acceso.aspx?company=pruebac" class="menum">
+                        <i class="fas fa-chevron-circle-down fa-2x"></i>
+                        <div class="item-title">Cuestionarios</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-3" name="menu" checked />
+            <label class="tab" for="radio-3">
+                <div class="item">
+                    <a href="/menu/menu.html" class="menum active">
+                        <i class="fas fa-bars fa-2x"></i>
+                        <div class="item-title">Más</div>
+                    </a>
+                </div>
+            </label>
+
+            <div class="blob-container">
+                <div class="blob"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/Contabilidad.jpg');">
+        <div class="hoc clear" style="height: 200px;">
+            <!-- ################################################################################################ -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12 col-lg-10 col-md-10 col-sm-12 text-left">
+                    <h3 style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                        Aviso de privacidad
+                    </h3>
+                </div>
+                <div class="col-12 col-lg-2 col-md-2 col-sm-12 ">
+                    <p>Inicio / Aviso</p>
+                </div>
+            </div>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                    <!--<h3>Términos y condiciones de uso</h3>-->
+                    <p class="text-justify">El presente Aviso de Privacidad, en lo sucesivo “Aviso” se emite en cumplimiento por lo dispuesto por el artículo 15 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), de los Lineamientos Generales previstos en el artículo 43, en su fracción III de esta Ley y del artículo 23.</p>
+                    <p class="text-justify">SPT Innovación, S.A De C.V. en lo sucesivo “TLA Contadores”, tiene el compromiso jurídico legal y social de cumplir con las medidas legales y de seguridad para proteger sus datos personales con el objetivo de que usted tenga el conocimiento, control y decisión sobre ellos y para las finalidades que en el presente Aviso serán descritas. Por ello, lo invitamos a que lea detenidamente la siguiente información.</p>
+
+                    <h3 style="color:#045fac">1.- Datos del responsable</h3>
+
+                    <p class="text-justify">En su artículo 3, fracción XIV, de la LFPDPPP establece que el responsable es; “Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales.” TLA Contadores como responsable del tratamiento de datos personales le comunica que es una asociación debidamente constituida de conformidad con las leyes de los Estados Unidos Mexicanos con domicilio en Blvr. Kino 315, Suite 1009, Piso 10 Edificio Grand Kino Hermosillo, Col. Lomas del Pitic, C.P. 83010; Nuestro teléfono es +52 (662)214-5772. en la Ciudad de Hermosillo, Sonora, México, nuestro correo electrónico contacto@tlacontadores.com.</p>
+                    <h3 style="color:#045fac">2.- Datos personales</h3>
+                    <p class="text-justify">De conformidad con el artículo 3, fracción V, de la LFPDPPP son: “Datos personales: Cualquier información concerniente a una persona física identificada o identificable.” TLA Contadores recabará de usted los datos personales necesarios para la adecuada prestación de nuestros servicios, este procedimiento puede ser de manera personal, directa o indirecta a través de nuestro portal o redes sociales. Estos Datos Personales podrán incluir todos o algunos de los siguientes:</p>
+                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Datos de identificación:</b> Nombre completo, domicilio, correo electrónico, teléfonos de casa, de trabajo, número de celular, Registro Federal de Contribuyentes (RFC), Clave Única de Registro Poblacional (CURP), lugar y fecha de nacimiento, edad.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Datos laborales:</b> Ocupación, nombre de la empresa, institución o dependencia, puesto, área o departamento, domicilio, teléfono, correo electrónico de trabajo, referencias laborales y referencias personales, giro de la empresa, institución o dependencia.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Datos Financieros:</b> N° de cuenta bancaria, CLABE, domicilio fiscal, número de tarjeta de crédito, fecha de vencimiento,
+                                así como el número de seguridad de la misma y que Usted utilice para adquirir alguno de nuestros servicios, al proporcionar
+                                estos datos usted reconoce que está otorgándonos su consentimiento expreso para el tratamiento de estos datos.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Datos Sensibles</b>, de conformidad con el artículo 3, fracción VI de la LFPDPPP, se entiende como Datos personales sensibles: “Aquellos datos personales que afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste. En particular, se consideran sensibles aquellos que puedan revelar aspectos como origen racial o étnico, estado de salud presente y futuro, información genética, creencias religiosas, filosóficas y morales, afiliación sindical, opiniones políticas, preferencia sexual.”
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Datos por la aplicación de la Norma Oficial Mexicana 035 (NOM-035-STPS)</b>. TLA Contadores recabará datos personales como consecuencia de la aplicación de la Norma Oficial Mexicana 035 (NOM-035) expedida por la Secretaria de Trabajo y Previsión Social que podrían resultar datos personales sensibles.
+                            </p>
+                        </li>
+                    </ul>
+                    <h3 style="color:#045fac">3.- Finalidades del tratamiento de datos</h3>
+                    <p class="text-justify">
+                        Los Datos Personales obtenidos por TLA Contadores serán utilizados para la realización de actividades relacionadas con nuestro Objeto Social, dentro de ellas, las siguientes:
+                    </p>
+                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                        <li class="text-justify">
+                            <p>
+                                Convocarlo a Reuniones, Foros, Congresos y eventos. Previa autorización, TLA Contadores utilizará sus datos personales en la elaboración de Bases de Datos y Directorios de TLA Contadores; así como la integración de Programas de Capacitación, Desarrollo institucional y de Asesoría y fortalecimiento y de aquellas relacionadas con la Responsabilidad Social. Trabajos de análisis estadísticos y de Investigación sobre la norma 035. El desarrollo de alianzas y relaciones interinstitucionales y de vinculación con organizaciones civiles sin fines de lucro que atienden causas sociales en común que coadyuvan con el bienestar del Estado a través de Encuentros, Foros, Redes y Portales.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                En el caso de la obtención de datos personales relacionados con la aplicación de la Norma Oficial Mexicana-035 esta información quedará al resguardo del responsable de Recursos humanos de la Dirección Administrativa del TLA Contadores.
+                            </p>
+                        </li>
+                    </ul>
+
+
+
+                    <h3 style="color:#045fac">4.- Finalidades secundarias</h3>
+                    <p class="text-justify">Además, si usted no manifiesta lo contrario, el TLA Contadores tratará sus Datos Personales para las siguientes finalidades secundarias:</p>
+
+                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                        <li class="text-justify">
+                            <p>
+                                Contactarlo para cualquier tema relacionado con nuestros servicios o con el presente Aviso de Privacidad. Efectuar promociones, y publicidad respecto de los productos y servicios de TLA Contadores. La atención y procesamiento de solicitudes, la administración en actividades de cobranza, aclaración, investigación y facturación de cargos relacionados con nuestros miembros afiliados, socios y usuarios o terceros que soliciten nuestros servicios.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                Llevar a cabo consultas, investigaciones y revisiones necesarias para la prestación de nuestros servicios a sus usuarios y en relación a sus quejas o peticiones. Cumplir las obligaciones derivadas de cualquier relación jurídica que se genere entre TLA Contadores y usted por la prestación de nuestros servicios que ofrecemos para el cumplimiento de leyes, reglamentos y disposiciones jurídicas y legales aplicables.
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h3 style="color:#045fac">5.-Transferencia de datos personales</h3>
+                    <p class="text-justify">Si usted no manifiesta lo contrario TLA Contadores podrá transferir sus datos personales en la medida que sea necesario para la prestación de nuestros servicios. En este sentido TLA Contadores le informa que, para poder prestar nuestros servicios, requerimos transferir dichos Datos Personales a:</p>
+
+                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                        <li class="text-justify">
+                            <p>Empresas de mensajería y operan bajo los mismos procesos y políticas de respeto a la privacidad.</p>
+                        </li>
+
+                    </ul>
+                    <p class="text-justify">TLA Contadores se compromete a velar porque se cumplan todos los principios legales de protección en torno a la transferencia de sus datos personales.</p>
+
+                    <h3 style="color:#045fac">6.- Limitación en el uso o divulgación de los datos personales</h3>
+                    <p class="text-justify">Usted puede limitar el uso o divulgación de sus datos personales para dejar de recibir nuestros servicios, así como las promociones, ofertas y publicidad respecto del TLA Contadores enviando una carta al domicilio en Blvr. Kino 315, Suite 1009, Piso 10 Edificio Grand Kino Hermosillo, Col. Lomas del Pitic, C.P. 83010, en la Ciudad de Hermosillo, Sonora, México; Llamando a nuestro teléfono +52 (662)214-5772, o mandando un correo electrónico a nuestro correo contacto@tlacontadores.com.</p>
+
+
+                    <h3 style="color:#045fac">7.- Derechos arco</h3>
+                    <p class="text-justify">
+                        Estos derechos consisten en lo siguiente:
+                    </p>
+                    <ul style="list-style:lower-alpha!important; padding-left:30px">
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Acceso.</b> - Implica conocer en todo momento sus datos personales en posesión de TLA Contadores, así como el Aviso de privacidad correspondiente.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Rectificación.</b> - Si alguno de sus datos es inexacto o incompleto, podrá solicitar su modificación, a nuestro domicilio en Blvr. Kino 315, Suite 1009, Piso 10 Edificio Grand Kino Hermosillo, Col. Lomas del Pitic, C.P. 83010, en la Ciudad de Hermosillo, Sonora, México; Llamando a nuestro teléfono +52 (662)214-5772, o mandando un correo electrónico a nuestro correo contacto@tlacontadores.com, adjuntando la documentación que acredite dicha corrección.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Cancelación.</b> - Podrá requerir cuando así lo considere la cancelación de sus datos y, en caso de ser procedente, su información personal entrará en un periodo de bloqueo para proceder posteriormente a su eliminación. Al entrar a dicho periodo, su información ya no podrá ser tratada por TLA Contadores.
+                            </p>
+                        </li>
+                        <li class="text-justify">
+                            <p>
+                                <b style="color:#045fac">Oposición.</b> - Podrá en todo momento y por causa legítima objetar el tratamiento de sus datos personales. Si su solicitud resulta procedente, TLA Contadores ya no podrá hacer uso de los mismos.
+                            </p>
+                        </li>
+
+                    </ul>
+                    <h3 style="color:#045fac">8.- Procedimiento para ejercer sus derechos arco</h3>
+                    <p class="text-justify">
+                        El titular de los Datos Personales, por sí o mediante representante legal, debiendo identificarse o acreditarse correctamente, podrá ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición, así como revocar su consentimiento llamando a nuestro teléfono +52 (662)214-5772, o enviado un correo electrónico a contacto@tlacontadores.com, describiendo de manera clara y precisa los datos personales respecto de los que se busca ejercer alguno de estos Derechos.
+                    </p>
+                    <p class="text-justify">Es importante señalar que en la llamada para ejercer los derechos ARCO usted deberá proporcionar una dirección de correo electrónico y número de teléfono a efecto de que podamos notificarle la respuesta a su solicitud o poder contactarlo en caso de requerir información adicional en relación con su petición. Asimismo, deberá enviarnos copia de su identificación oficial para acreditar su identidad.</p>
+
+                    <p class="text-justify">Por último, le informamos que se le responderá en un plazo máximo de 08 (ocho) días hábiles, contados desde la fecha en que cumpla con todos los requisitos establecidos en la solicitud de acceso, rectificación, cancelación u oposición; Si resulta procedente, se hará efectiva dentro de los 08(ocho) días hábiles siguientes a la fecha en que se le comunique respuesta.</p>
+                    <h3 style="color:#045fac">9.- Cambios al aviso de privacidad</h3>
+                    <p class="text-justify">Cualquier cambio significativo o total que se realice al presente Aviso de Privacidad podrá ser realizado por TLA Contadores y será comunicado a través de nuestra página web tlacontadores.com, o mediante correo electrónico a la dirección del titular que para tales efectos mantenga la Asociación registrada.</p>
+                    <h3 style="color:#045fac">10.- Departamento de datos personales</h3>
+                    <p class="text-justify">Teléfono: Administración +52 (662)214-5772. Correo electrónico: contacto@tlacontadores.com, horario: de lunes a viernes de 9:00 A.M. a 15:00 horas.</p>
+                    <h3 style="color:#045fac">11.- Web beacons y cookies</h3>
+                    <p class="text-justify">Los sitios de Internet y servicios en línea de TLA Contadores se basan en el manejo de: Web Beacons Imágenes insertadas en páginas o portales de Internet, así como en correos electrónicos y que entre otros pueden almacenar información de la dirección IP del usuario, tiempo de interacción en los sitios web, entre otros, que permiten al TLA Contadores recabe automáticamente datos personales. Al ingresar y continuar con el uso del Sitio de Internet, Usted consiente que TLA Contadores recabe y trate sus datos personales. El uso de estas tecnologías es necesario por motivos de operación, técnicos y de seguridad.</p>
+                    <h3 style="color:#045fac">12.- Aceptación y consentimiento</h3>
+                    <p class="text-justify">TLA Contadores tratará sus Datos Personales única y exclusivamente conforme a los términos del presente Aviso de Privacidad que dan origen a la relación entre TLA Contadores en su carácter de Entidad Responsable y usted como Titular de los datos personales. Usted, al proporcionar sus datos personales, confirma y acepta que ha leído este Aviso de Privacidad y otorga su consentimiento para ajustarse a lo señalado en el mismo.</p>
+
+                    <br />
+                    <div class="text-right">
+                        <p>
+                            <b style="color:#045fac">TLA Contadores</b> <br /> Fecha de creación 12 de noviembre de 2021
+
+                        </p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+
+                    <div class="card">
+                        <div class="card-header" style="background-color:#045fac; color:white"><p>Aviso de privacidad</p></div>
+                        <div class="card-body">
+                            <p>Descarga nuestro Aviso de privacidad</p>
+                            <br />
+                            <div class="text-left">
+                                <a href="Content/Documentos/Aviso-Privacidad-tlacontadores.pdf" style="font-size:18px"><i class="fas fa-file-pdf" aria-hidden="true" style="font-style:normal;  "></i> Aviso de privacidad PDF</a><br />
+                                <a href="Content/Documentos/Aviso-Privacidad-tlacontadores.docx" style="font-size:18px"><i class="fas fa-file-word" aria-hidden="true" style="font-style:normal;  "></i>  Aviso de privacidad Word</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper row4">
+        <footer id="footer" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <div class="one_quarter first">
+                <h1 class="logoname clear"><a href="index.html"><img src="images/demo/logo-blanco.png" style="width: 100%;"></a></h1>
+                <p class="btmspace-30">
+                    Firma de Contadores dedicado a ofrecerle servicios profesionales de auditoria,
+                    impuestos, contabilidad y consultoría administrativa y financiera. [<a href="#">&hellip;</a>]
+                </p>
+                <ul class="faico clear">
+                    <li><a class="faicon-facebook" href="https://www.facebook.com/tlacontadores/"><i class="fab fa-facebook"></i></a></li>
+                    <!--<li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>-->
+                </ul>
+            </div>
+            <div class="one_quarter">
+                <h6 class="heading">Contacto</h6>
+                <ul class="nospace linklist contact">
+                    <li>
+                        <a href="https://www.google.com/maps/place/Grand+Kino+Hermosillo/@29.097082,-110.937531,19z/data=!4m5!3m4!1s0x0:0xcdc312ab76cbcfa0!8m2!3d29.0970824!4d-110.937531?hl=es-419" style="text-decoration:none; color:#fff">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Blvr. Kino 315, Suite 1009, Piso 10
+                                Edificio Grand Kino Hermosillo, Col. Lomas del Pitic, C.P. 83010
+                            </address>
+                        </a>
+                    </li>
+                    <li><a href="tel:+6622145772" style="text-decoration:none; color:#fff"><i class="fas fa-phone"></i> (662)214·5772</a></li>
+
+                    <li>
+                        <a href="mailto:contacto@tlacontadores.com?bcc=ymeldaleyva@tlacontadores.com&Subject=Solicitud%20de%20Información" style="text-decoration:none; color:#fff">
+                            <i class="far fa-envelope"></i>
+                            contacto@tlacontadores.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="one_quarter">
+                <h6 class="heading">Menú</h6>
+                <ul class="nospace linklist">
+                    <li><a href="nosotros.html" class="linkfooter">Nosotros</a></li>
+                    <li><a href="servicios.html" class="linkfooter">Nuestros Servicios</a></li>
+                    <li><a href="Buzon.aspx" class="linkfooter">Línea de denuncias</a></li>
+
+
+                </ul>
+            </div>
+            <div class="one_quarter">
+                <h6 class="heading">Avisos</h6>
+                <ul class="nospace linklist">
+                    <li><a href="Aviso-privacidad.html" class="linkfooter">Aviso de privacidad</a></li>
+                    <li><a href="terminos-condiciones.html" class="linkfooter">Términos y Condiciones</a></li>
+
+
+                </ul>
+            </div>
+            <!-- ################################################################################################ -->
+        </footer>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row5">
+        <div id="copyright" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+    <script>
+        $(window).on('load', function () {
+            setTimeout(function () {
+                $(".loader").css({ visibility: "hidden", opacity: "0" })
+            }, 1000);
+
+        });
+    </script>
+</body>
+</html>

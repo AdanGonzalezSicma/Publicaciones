@@ -1,0 +1,718 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CreandoProductividad.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/images/demo/logo-icon2.ico" rel="icon" />
+    <title>NOM-035</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/Content/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/Content/css/adminlte.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/menu.css" rel="stylesheet" />
+   
+</head>
+<script>
+     
+      
+        window.onload = function ejemplo1() {
+            if (screen.width < 1024) {
+                document.getElementById("page-top").className = "sidebar-toggled";
+                 document.getElementById("accordionSidebar").className += " toggled";
+            }
+            else {
+                document.getElementById("page-top").removeClass = "sidebar-toggled";
+                 document.getElementById("accordionSidebar").removeClass = " toggled";
+            }
+    
+        }
+       
+       
+        
+
+    
+</script>
+<body id="page-top">
+     <div class="loader text-center">
+         <div class="loader2" >
+  <img src="/images/load.gif" style="width:100px;"/>
+         <p style="font-size:20px;color:#424242">Cargando...</p>
+         </div>
+       
+     </div> 
+    <style>
+        .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background:  50% 50% no-repeat rgb(249,249,249);
+    opacity: .9;
+}
+          .loader2 {
+    position: fixed;
+    left: 0px;
+    top: 44%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    
+   
+}
+        
+        /*Clases que se utilizan para cambiar el fondo del collapse*/
+        .sidebar .nav-item .collapse .collapse-inner .collapse-item.active, .sidebar .nav-item .collapsing .collapse-inner {
+                        color: #fff;
+                        font-weight: 700;
+                        background-color: #ffffff
+                    }
+         /*Clases que se utilizan para cambiar el color de los botones de popup de eliminar y cancelar*/
+        .btnCancelarPopup{
+            color:#045fac;
+            background-color:#fff;
+            border:3px solid #045fac;
+            height: 36px; width: 109px;
+        }
+        .btnEliminarPopup{
+            color:#fff;
+            background-color:#26cbc7;
+            border:3px solid #26cbc7;
+            height: 36px; width: 109px;
+        }
+        
+         @media screen and (max-width: 600px) {
+
+ h3{
+     font-size: 1.3rem
+ }
+}
+               .dxgvHeader_Material {
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 21px 10px 17px;
+    border: 1px solid #DFDFDF;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: left;
+    font: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: 600; 
+    font-size: 1em;
+}
+               .dxbButton_Material {
+                    font-weight: 600!important; 
+               }
+              .dxmLite_Material .dxctToolbar_Material.dxm-main.dxmtb {
+    background-color: #f8f9fc!important;
+    }
+              .dxgvControl_Material, .dxgvDisabled_Material{
+                   background-color: #f8f9fc!important;
+              }
+    </style>
+   
+    <form id="form1" runat="server">
+       
+                <%=CargarCss() %>
+        <%  
+            HttpContext context = HttpContext.Current;
+
+            //SE OBTIENE EL LISTADO DE PERMISOS QUE TIENE LA EMPRESA LOGUEADA
+            CreandoProductividad.Models.GenUsuariosRoles oRoles = context.Session["RolUsuario"] as CreandoProductividad.Models.GenUsuariosRoles;
+        %>
+        <!-- Page Wrapper -->
+        <div id="wrapper" style="min-height:110vh">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar" style="border:none!important">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Panel/Dashboard.html">
+                    <div class="sidebar-brand-icon">
+                        <br />
+                        <img id="myImage" src="/Content/img/nom.png" style="width: 100%;"/>                       
+                    </div>
+                </a>
+                <br />
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Menú
+                </div>
+                <!-- SECCIÓN: RESULTADOS -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerResultados))
+                    {
+                %>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item" id="res">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Observaciones/Observacion-Categorias.aspx") || Request.RawUrl.Contains("/Observaciones/Observacion-Dominios.aspx") || Request.RawUrl.Contains("/Panel/Dashboard.aspx") ? "" : "collapsed" %>" href="#" data-toggle="collapse" data-target="#collapseResultados" aria-expanded="true" aria-controls="collapseResultados">
+                    <i class="fas fa-fw fa-chart-pie" style="font-size:30px" id="icono"></i>
+                       
+                        <span>Resultados</span>
+                    </a>
+                    <div id="collapseResultados" class="collapse " aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Dashboard.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Dashboard.aspx">Gráficos x Frecuencia</a>
+                            <a class="<%= Request.RawUrl.Contains("/Observaciones/Observacion-Categorias.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Observaciones/Observacion-Categorias.aspx">Observaciones Categorias</a>
+                            <a class="<%= Request.RawUrl.Contains("/Observaciones/Observacion-Dominios.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Observaciones/Observacion-Dominios.aspx">Observaciones Dominios</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <%
+                    }
+                %>
+                <!--SECCIÓN:Panel  de encuestas -->
+                <%if (Convert.ToBoolean(oRoles.VerEncuestas))
+                    { %>
+                <li class="nav-item " id="enc">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Panel/Encuestas-Guia-I.aspx")||Request.RawUrl.Contains("/Panel/Detalle-informe-I.aspx") || Request.RawUrl.Contains("/Panel/Encuestas-Guia-II-III.aspx") || Request.RawUrl.Contains("/Panel/Encuestas-Guia-V.aspx")  || Request.RawUrl.Contains("/Panel/Detalle.aspx") || Request.RawUrl.Contains("/Panel/Resultados.aspx") || Request.RawUrl.Contains("/Panel/Detalle.aspx") || Request.RawUrl.Contains("/Panel/Encuestas.aspx") ? "" : "collapsed" %>" href="#" data-toggle="collapse" data-target="#collapseEncuestas" aria-expanded="true" aria-controls="collapseEncuestas">
+                       <i class="fas fa-fw fa-poll-h" style="font-size:30px" id="icono2"></i> 
+                        <span>Encuestas</span>
+                    </a>
+                    <div id="collapseEncuestas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Encuestas-Guia-I.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Encuestas-Guia-I.aspx">Encuestas Guía I</a>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Detalle-informe-I.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Detalle-informe-I.aspx">Detalle Guía I</a>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Encuestas-Guia-II-III.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Encuestas-Guia-II-III.aspx">Encuestas Guía II/III</a>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Detalle.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Detalle.aspx">Detalle Guías II/III</a>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Encuestas-Guia-V.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Encuestas-Guia-V.aspx">Encuestas Guía V</a>
+                            <a class="<%= Request.RawUrl.Contains("/Panel/Detalle-Informe-V.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Panel/Detalle-Informe-V.aspx">Detalle Guía V</a>
+                        </div>
+                    </div>
+                </li>
+                <% }%>
+                <!--SECCIÓN: Reportes -->
+                <%if (Convert.ToBoolean(oRoles.VerReportes))
+                    { %>
+                <li class="nav-item <%= Request.RawUrl.Contains("/Panel/Reportes.aspx") ? "active" : "" %>" id="repo">
+                    <a class="nav-link" href="/Panel/Reportes.aspx"><i class="fas fa-fw fa-file-contract" style="font-size:30px" id="icono3"></i><span>Reportes</span></a>
+                </li>
+                <% } %>
+                <!-- SECCIÓN: EXPEDIENTES ATS -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerExpedientesATS))
+                    {
+                %>
+                <li class="nav-item <%= Request.RawUrl.Contains("/Panel/ExpedientesATS.aspx") ? "active" : "" %>" id="expats">
+                    <a class="nav-link" href="/Panel/ExpedientesATS.aspx"><i class="fas fa-fw fa-chart-area"  style="font-size:30px" id="icono4"></i><span>Expedientes ATS</span></a>
+                </li>
+                <%
+                    }
+                %>
+                <!-- SECCIÓN: CONSTANCIA D-3 -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerConstanciaDC3))
+                    {
+                %>
+                <li class="nav-item <%= Request.RawUrl.Contains("/Constancias/DC-3.aspx") ? "active" : "" %>" id="const">
+                    <a class="nav-link" href="/Constancias/DC-3.aspx">
+                     
+                        <i class="fas fa-fw fa-file-invoice" style="font-size:30px" id="icono5"></i>
+                        <span>Constancia DC-3</span>
+                    </a>
+                </li>
+                <%
+                    }
+                %>
+                
+                <!-- SECCIÓN: CENTROS DE TRABAJO -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerCentrosTrabajo))
+                    {
+                %>
+                <li class="nav-item <%= Request.RawUrl.Contains("/Panel/AreaEvaluacion.aspx") ? "active" : "" %>" id="centrosT">
+                    <a class="nav-link" href="/Panel/AreaEvaluacion.aspx"><i class="fas fa-fw  fa-building"  style="font-size:30px" id="icono6"></i><span>Centros de trabajo</span></a>
+                </li>
+                <%
+                    }
+                %>
+                <% if (Convert.ToBoolean(oRoles.VerCursosTalleres))
+                    {
+                        %>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-book icono"  style="font-size:30px" id="icono7"></i>
+                        <span>Plan de capacitación</span>
+                    </a>
+                    <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <% if (Convert.ToBoolean(context.Session["EsMatriz"].ToString()))
+                                {%>
+                            <a href="/Cursos-y-Talleres/Cursos-y-Talleres.aspx" class="collapse-item" style="font-size: 15px"><b>Cursos y Talleres</b></a>
+                            
+                            <%}%>
+                            <%= CargarCursos()%>
+                            <%--<%= CargarTalleres()%>--%>
+                        </div>
+                    </div>
+                </li>
+
+                    <%}
+                    %>
+                <!-- SECCIÓN: CURSOS -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerCursos))
+                    {
+                %>
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesx" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-chalkboard-teacher"  style="font-size:30px" id="icono8"></i>
+                        
+                        <span>Cursos</span>
+                    </a>
+                    <div id="collapseUtilitiesx" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            
+                            
+                            
+                            <h6 class="collapse-header">Opciones:</h6>                           
+                            <a class="collapse-item" href="/Curso01/index.html">Trabajadores</a>
+                            <a class="collapse-item" href="/CursoDirectivos/index.html">Directivos</a>
+                            <h6 class="collapse-header">Recomendaciones:</h6>
+                            <a class="collapse-item" href="/Recomendaciones/index.html">Capacitador</a>
+                        </div>
+                    </div>
+                </li>
+                   
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities3" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-users-cog" style="font-size:30px" id="icono9"></i>
+                       
+                        <span>Guias de Usuarios</span>
+                    </a>
+                    <div id="collapseUtilities3" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <%--        <a class="collapse-item" href="/manual-usuario/Manual-usuario.html">Manual Usuario V1</a>
+                             <a class="collapse-item" href="/manual-usuario/Manual-usuarioV2.html">Manual Usuario V2</a>--%>
+                            <a class="collapse-item" href="/manual-usuario/Manual-usuario.aspx">Configuración Inicial</a>
+                             <%-- <a class="collapse-item" href="/manual-usuario/resultados/resultados.html">Resultados</a>--%>
+                           <%--  <a class="collapse-item" href="/manual-usuario/resultados/resultados-promedio.html">Resultados por Promedio</a>--%>
+                           <%--  <a class="collapse-item" href="/manual-usuario/resultados/resultados-Detalle.html">Resultados por Detalle</a>
+                             <a class="collapse-item" href="/manual-usuario/Encuestas/encuestas.html">Encuestas</a>
+                            <hr style="color:white!important;background-color:white!important"/>--%>
+                             <a class="collapse-item" href="/manual-usuario/Cuestionarios/Cuestionarios.html">Guia para cuestionarios</a>
+                             <a class="collapse-item" href="/manual-usuario/Cuestionarios/resultados.html">Guia para ver resultados</a>
+                            <a class="collapse-item" href="/manual-usuario/Cuestionarios/reportes.html">Guia para ver reportes</a>
+                             <a class="collapse-item" href="/manual-usuario/sistema/Guia-sistema.html">Guia del Sistema</a>
+                        </div>
+                    </div>
+                </li>
+
+                   <!-- Nav Item - Utilities Collapse Menu -->
+                <%--<li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities4" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-book"></i>
+                        <span>Observaciones</span>
+                    </a>
+                    <div id="collapseUtilities4" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+
+                        </div>
+                    </div>
+                </li>--%>
+
+
+
+                <%
+                    }
+                %>
+
+                <!-- SECCIÓN: EMPRESAS -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerEmpresas))
+                    {
+                %>
+                <li class="nav-item <%= Request.RawUrl.Contains("/Configuracion/Control_Empresas.aspx") ? "active" : "" %>">
+                    <a class="nav-link" href="/Configuracion/Control_Empresas.aspx"><i class="fas fa-fw fa-chart-area" style="font-size:30px" id="icono10"></i><span>Empresas</span></a>
+                </li>
+                <%
+                    }
+                %>
+
+                <!-- SECCIÓN: CONFIGURACIÓN  -->
+                <%
+                    if (Convert.ToBoolean(oRoles.VerConfiguracion))
+                    {
+                %>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-fw fa-folder" style="font-size:30px" id="icono11" ></i>
+                        <span>Configuración</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Catálogos:</h6>
+                            <!--<a class="collapse-item" href="/Configuracion/Periodos.aspx">Periodos de evaluación</a>-->
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasGuias.aspx">Guías</a>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasCategorias.aspx">Categorías</a>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasDominios.aspx">Dominios</a>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasDimensiones.aspx">Dimensiones</a>
+                            <a class="collapse-item" href="/Catalogos/NOMTipoRespuestas.aspx">Tipos de respuestas</a>
+                            <h6 class="collapse-header">Cuestionarios:</h6>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasCuestionarios.aspx?TipoCuestionario=1">
+                                <p>
+                                    Guia Referencia I.-<br />
+                                    Acontecimientos<br />
+                                    Traumaticos
+                                </p>
+                            </a>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasCuestionarios.aspx?TipoCuestionario=2">
+                                <p>
+                                    Guia Referencia II.-<br />
+                                    Factores de Riesgo<br />
+                                    Psicosocial
+                                </p>
+                            </a>
+                            <a class="collapse-item" href="/Catalogos/NOMEncuestasCuestionarios.aspx?TipoCuestionario=3">
+                                <p>
+                                    Guia Referencia III.-<br />
+                                    Evaluación del<br />
+                                    Entorno Psicosocial
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <%
+                    }
+                %>
+                
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle" type="button" onclick="changeImage()">
+                    </button>
+                </div>
+
+            </ul>
+            <!-- End of Sidebar -->
+             <div class="menu-container">
+
+        <div class="menu" id="menu">
+
+            <input type="radio" id="radio-0" name="menu" />
+            <label class="tab" for="radio-0"id="label1">
+                <div class="item">
+                    <a href="/Menu/Resultados.aspx" class="menum" id="resultados">
+                        <i class="fas fa-chart-pie fa-2x"></i>
+                        <div class="item-title">Resultados</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-1" name="menu" />
+            <label class="tab" for="radio-1" id="label2">
+                <div class="item">
+                    <a href="/Menu/Encuestas.aspx" class="menum" id="Encuestas">
+                        <i class="fas fa-poll-h fa-2x"></i>
+                        <div class="item-title">Encuestas</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-2" name="menu" />
+            <label class="tab" for="radio-2">
+                <div class="item">
+                    <a href="/Panel/Reportes.aspx" class="menum" id="reportes">
+                        <i class="fas fa-file-contract fa-2x"></i>
+                        <div class="item-title">Reportes</div>
+                    </a>
+                </div>
+            </label>
+
+            <input type="radio" id="radio-3" name="menu" />
+            <label class="tab" for="radio-3">
+                <div class="item">
+                    <a href="/Menu/menu-sistema.aspx" class="menum" id="mas">
+                        <i class="fas fa-bars fa-2x"></i>
+                        <div class="item-title">Más</div>
+                    </a>
+                </div>
+            </label>
+
+            <div class="blob-container" id="bob">
+                <div class="blob"></div>
+            </div>
+
+        </div>
+    </div>
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" type="button" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <%--<div class="topbar-divider d-none d-sm-block"></div>--%>
+                            <!-- Nav Item - Messages -->
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope fa-fw"></i>
+
+                                    <span class="badge badge-danger badge-counter">
+                                        <asp:Label ID="lblContadorAvisos" runat="server" Text="0"></asp:Label></span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header">Mensajes del sistema</h6>
+                                    <asp:Repeater ID="repeaterMensajes" runat="server">
+                                        <ItemTemplate>
+                                            <a class="dropdown-item d-flex align-items-center">
+                                                <div>
+                                                    <div class="text"><%#Eval("Titulo") %></div>
+                                                    <div class="small text-gray-500"><%#Eval("Mensaje") %></div>
+                                                </div>
+                                            </a>
+                                        </ItemTemplate>
+
+                                    </asp:Repeater>
+
+
+                                    <a class="dropdown-item text-center small text-gray-500" href="/Mensajeria/MensajeriaPorEmpresa.aspx" style="background-color: white">Más mensajes</a>
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline  small">
+                                        <asp:Label ID="lblUsuario" runat="server" Text="Usuario" Style="font-size: 16px"></asp:Label>
+                                    </span>
+                                    <asp:Image ID="imgUsuario" runat="server" class="img-profile rounded-circle" />
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="/Cuenta/Perfil.aspx">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Perfil
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <asp:LinkButton class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" ID="lbtnCerrarSesion" runat="server" OnClick="lbtnCerrarSesion_Click">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cerrar Sesión
+
+                                    </asp:LinkButton>
+
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white-Footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto" style="color: black">
+                            <h5><span style="color:white">Copyright &copy; Sicma Controles 2020</span></h5>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Cerrar Sesión</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">¿Estás seguro que deseas cerrar sesión?</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-cancelar" type="button" data-dismiss="modal">Cancelar</button>
+                        <asp:LinkButton ID="btnLogOut" class="btn btn-salir" runat="server" OnClick="lbtnCerrarSesion_Click">Salir</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/Content/js/sb-admin-2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+      setTimeout(function () {
+    $(".loader").css({visibility:"hidden",opacity:"0"})
+  }, 1000);
+     
+});
+
+
+
+
+//$(window).load(function() {
+//    $(".loader").fadeOut("slow");
+//});
+
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("/Content/img/nom.png")) {
+                image.src = "/images/nom.png";
+            } else {
+                image.src = "/Content/img/nom.png";
+            }
+            var iconos = document.getElementById("icono");
+            if (iconos.style.fontSize.match("30px")) {
+                iconos.style.fontSize = "20px";
+            } else {
+                iconos.style.fontSize = "30px";
+            }
+            var iconos2 = document.getElementById("icono2");
+            if (iconos2.style.fontSize.match("30px")) {
+                iconos2.style.fontSize = "20px";
+            } else {
+                iconos2.style.fontSize = "30px";
+            }
+            var iconos3 = document.getElementById("icono3");
+            if (iconos3.style.fontSize.match("30px")) {
+                iconos3.style.fontSize = "20px";
+            } else {
+                iconos3.style.fontSize = "30px";
+            }
+            var iconos4 = document.getElementById("icono4");
+            if (iconos4.style.fontSize.match("30px")) {
+                iconos4.style.fontSize = "20px";
+            } else {
+                iconos4.style.fontSize = "30px";
+            }
+            var iconos5 = document.getElementById("icono5");
+            if (iconos5.style.fontSize.match("30px")) {
+                iconos5.style.fontSize = "20px";
+            } else {
+                iconos5.style.fontSize = "30px";
+            }
+            var iconos6 = document.getElementById("icono6");
+            if (iconos6.style.fontSize.match("30px")) {
+                iconos6.style.fontSize = "20px";
+            } else {
+                iconos6.style.fontSize = "30px";
+            }
+            var iconos7 = document.getElementById("icono7");
+            if (iconos7.style.fontSize.match("30px")) {
+                iconos7.style.fontSize = "20px";
+            } else {
+                iconos7.style.fontSize = "30px";
+            }
+            var iconos8 = document.getElementById("icono8");
+            if (iconos8.style.fontSize.match("30px")) {
+                iconos8.style.fontSize = "20px";
+            } else {
+                iconos8.style.fontSize = "30px";
+            }
+            var iconos9 = document.getElementById("icono9");
+            if (iconos9.style.fontSize.match("30px")) {
+                iconos9.style.fontSize = "20px";
+            } else {
+                iconos9.style.fontSize = "30px";
+            }
+            var iconos10 = document.getElementById("icono10");
+            if (iconos10.style.fontSize.match("30px")) {
+                iconos10.style.fontSize = "20px";
+            } else {
+                iconos10.style.fontSize = "30px";
+            }
+            var iconos11 = document.getElementById("icono11");
+            if (iconos11.style.fontSize.match("30px")) {
+                iconos11.style.fontSize = "20px";
+            } else {
+                iconos11.style.fontSize = "30px";
+            }
+
+
+        }
+    </script>
+</body>
+</html>

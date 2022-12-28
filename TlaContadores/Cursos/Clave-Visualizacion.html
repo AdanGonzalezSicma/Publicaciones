@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NOM-035</title>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="../Content/css/adminlte.min.css" rel="stylesheet" />
+    <link href="../Content/css/main.min.css" rel="stylesheet" />
+    <link href="../Content/css/sb-admin-2.css" rel="stylesheet" />
+    <link href="../Content/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="icon" href="../images/nom.png" type="image/x-icon">
+
+</head>
+
+<body class="wrapper" style="background-color: #fff;">
+    <style>
+        .jumbotron {
+            padding: 0.5rem 1rem;
+            margin-bottom: 0rem !important;
+            background-color: #43bfc7;
+            border-radius: 0.3rem;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 1px 10px;
+            font-size: 14px;
+            line-height: 1;
+            color: #495057;
+            background-color: #ffffff;
+            background-image: none;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+        .row {
+            margin-top: 12px !important
+        }
+
+        @media screen and (max-width: 1700px) and (min-width: 1500px) {
+            h3 {
+                font-size: 20px
+            }
+
+            .card-header {
+                padding: 0.4rem 1.25rem;
+            }
+
+            h4 {
+                font-size: 20px
+            }
+
+            #perfil {
+                width: 100px;
+                height: 100px
+            }
+
+            #contenido {
+                margin-top: 3%
+            }
+        }
+
+        @media screen and (max-width: 1700px) {
+
+            #perfil {
+                width: 100px;
+                height: 100px
+            }
+
+            h3 {
+                font-size: 20px
+            }
+        }
+
+        @media screen and (min-width: 1701px) {
+            h3 {
+                font-size: 25px
+            }
+
+            .card-header {
+                padding: 0.75rem 1.25rem;
+            }
+
+            #perfil {
+                width: 120px;
+                height: 120px
+            }
+
+            #contenido {
+                margin-top: 3%
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+
+
+            #avance {
+                padding: 0
+            }
+        }
+        @media screen and (max-width: 600px) {
+            #informacion {
+                text-align: center
+            }
+        }
+        .card-body{
+            padding-top:0rem!important
+        }
+        .card-body {
+            padding-bottom: 0rem !important
+        }
+        #btnComenzar {
+            background-color: #43bfc7;
+            color: white;
+        }
+
+        #btnSalir {
+            background-color: #43bfc7;
+            color: white;
+        }
+        .card-header {
+            background-color: #f88017;
+            color: white;
+        }
+        .card-footer {
+            background-color: #f88017;
+        }
+        h5{
+            color:white
+        }
+        label{
+            color:navy
+        }
+        p{
+            color:navy
+        }
+    </style>
+    <div class="content" id="contenido">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 col-sm-0"></div>
+                <div class="col-lg-10 col-sm-12">
+                    <div class="card" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);">
+                        <div class="card-header">
+                            <h3 class="card-title text-center" style=" float: none; font-size:20px">
+                                <b> <i class="ion ion-clipboard mr-1"></i>Bienvenido a NOM-035-STPS-2018</b>
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="jumbotron">
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <img src="../Content/img/DEFAULT.jpeg" alt="IMAGEN" id="perfil" style=" box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); " />
+                                            </div>
+                                            <div id="informacion" class="col-lg-10 col-sm-12">
+
+                                                <h5><b>  Nombre de la Empresa </b></h5>
+                                                <h5><b>  Centro de Trabajo </b></h5>
+                                                <h5><b>  Nombre del curso </b></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-lg-2 col-sm-0"></div>
+                                <div class="col-lg-8 col-sm-12" id="avance">
+                                    <form action="/action_page.php">
+                                        <div class="text-center">
+                                            <p style="font-size:18px">Por Favor ingrese la siguiente información para acceder al curso</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-0"></div>
+                                            <div class="col-lg-8 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Clave Cuestionario:</label>
+                                                    <input type="text" class="form-control" placeholder="Ingrese la clave del cuestionario">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="pwd">PIN de seguridad:</label>
+                                                    <input type="password" class="form-control" placeholder="Ingrese el PIN de seguridad" id="pwd">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Nombre:</label>
+                                                    <input type="text" class="form-control" placeholder="Ingrese su Nombre">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Departamento:</label>
+                                                    <select class="form-control" id="sel1">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Puesto:</label>
+                                                    <input type="text" class="form-control" placeholder="Ingrese su puesto">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-2 col-sm-0"></div>
+                                        </div>
+                                       
+
+                                    </form>
+                                </div>
+                                <div class="col-lg-2 col-sm-0"></div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <button id="btnComenzar" type="button" class="btn float-right" style="width: 100px; margin-right: 2px;">Iniciar</button>
+                            <button id="btnSalir" type="button" class="btn float-left" style="width: 100px; margin-right: 2px;">Salir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-sm-0"></div>
+            </div>
+            </div>
+        </div>
+</body>
+</html>

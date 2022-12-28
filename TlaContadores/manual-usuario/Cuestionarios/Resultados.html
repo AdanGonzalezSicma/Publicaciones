@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+    <title>NOM-035</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/nom.png" type="image/x-icon">
+    <!-- Stylesheets-->
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+        /*Clase para manipular el color de la barra superior*/
+        .section-banner {
+            background: #00367c;
+        }
+        /*Clase para manipular el color de fondo, borde y letra de los botones*/
+        .button-primary, .button-primary {
+            background-color: #548cde;
+            border-color: #548cde;
+            color: #fff !important
+        }
+            /*Clase para manipular el color de fondo, borde y letra de los botones en hover*/
+            .button-primary.button-ujarak::before {
+                color: #ffffff;
+                background-color: #151515;
+                border-color: #151515;
+            }
+
+        /*Clases para manipular el color de letra del card*/
+        .card-body {
+            color: #045fac;
+        }
+
+            .card-body h4, h3 {
+                color: #045fac;
+            }
+
+        .card-header {
+            background-color: #045fac;
+            color: white
+        }
+        /*clase para cambiar el color de letra del banner superior*/
+        .section-banner h5, h3 {
+            color: white
+        }
+        /*clase para cambiar el color del borde del banner superior*/
+        .borde {
+            border-right: 3px solid #548cde;
+        }
+        /*clase para cambiar el color de fondo del banner superior*/
+        .Titulo-header {
+            background: rgb(248,128,23);
+            background: linear-gradient(100deg,#548cde, #045fac);
+        }
+            /*clase para cambiar el color de letra del banner superior*/
+            .Titulo-header h3 {
+                text-shadow: 3px 3px 2px black;
+                color: #fff !important;
+                padding: 40px;
+                text-transform: none
+            }
+
+        .titulos {
+            color: #045fac
+        }
+
+        b {
+            color: #045fac
+        }
+
+        .seccion-importante {
+            background-color: #045fac;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important
+        }
+
+            .seccion-importante p {
+                color: white;
+                padding: 30px;
+                font-size: 20px;
+                text-shadow: 2px 2px 2px gray;
+                color: #fff !important
+            }
+
+        a {
+            color: #26cbc7 !important
+        }
+
+        .rd-navbar-static .rd-nav-link {
+            color: #045fac !important
+        }
+
+            .rd-navbar-static .rd-nav-link .active {
+                color: #26cbc7 !important
+            }
+
+        .rd-navbar-classic.rd-navbar-static .rd-nav-link::before {
+            color: #26cbc7 !important
+        }
+
+        .tabs-horizontal.tabs-line .nav-tabs {
+            justify-content: space-between;
+            border-bottom: 3px solid #26cbc7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="ie-panel">
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+            <img src="../#" height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+        </a>
+    </div>
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div id="home">
+
+            <!-- Top Banner-->
+            <div class="container-fluid section section-banner text-center d-none d-xl-block">
+                <div class="row text-center" style="padding:0.5%">
+                    <div class="col-lg-4 col-md-5 borde"><h3 style="font-size:25px;"> ¡Plataforma NOM-035!</h3></div>
+                    <div class="col-lg-5 col-md-5  borde"><h5 style="text-transform:none;">Para cumplir paso a paso con la implementación de la NOM-035</h5></div>
+                    <div class="col-lg-3 col-md-2"><button class="button button-primary button-ujarak" style="padding: 10px 23px 10px!important; min-width:100px"> Salir</button></div>
+                </div>
+            </div>
+            <!-- Page Header-->
+            <header class="section page-header">
+                <!-- RD Navbar-->
+                <div class="rd-navbar-wrap">
+                    <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+                         data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+                         data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+                         data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+                         data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+                         data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                        <div class="rd-navbar-main-outer">
+                            <div class="rd-navbar-main">
+                                <!-- RD Navbar Panel-->
+                                <div class="rd-navbar-panel">
+                                    <!-- RD Navbar Toggle-->
+                                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                                    <!-- RD Navbar Brand-->
+                                    <div class="rd-navbar-brand">
+                                        <a class="brand" href="/index.html">
+                                            <img src="/Content/img/nom.png"
+                                                 alt="" width="223" height="50" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="rd-navbar-main-element">
+                                    <div class="rd-navbar-nav-wrap">
+                                        <!-- RD Navbar Share-->
+                                        <!--<ul class="rd-navbar-nav">
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#paso1" style="font-size:25px">Paso 1</a></li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#paso2" style="font-size:25px">Paso 2</a></li>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="#paso3" style="font-size:25px">Paso 3</a></li>-->
+                                        <!--<%--
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#paso4" style="font-size:25px">Paso 4</a></li>--%>-->
+                                        <!--</ul>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section>
+                <div class="container-fluid Titulo-header">
+                    <div class="row">
+                        <div class="col-md-12 col-12 col-sm-12 col-lg-12">
+                            <h3 data-caption-animate="fadeInLeft" data-caption-delay="0">
+                                Instrucciones para la correcta visualización de los resultados de aplicación de la <br /> NOM-035-STPS-2018
+                            </h3>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+
+        <div></div>
+
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso2">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style="text-transform:none">Menú del sistema: Resultados</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La primera opción que encontrará en el menú será RESULTADOS, en esta sección se desglosará un submenú con las siguientes opciones:
+                                        </p>
+                                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                                            <li style="font-size:18px"><b>•</b>	Gráficos por Frecuencia</li>
+                                            <li style="font-size:18px"><b>•</b> Observaciones Categorías</li>
+                                            <li style="font-size:18px"><b>•</b> Observaciones Dominio</li>
+                                            <!--<li style="font-size:18px"><b>•</b> Encuestas Guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía l</li>
+                                            <li style="font-size:18px"><b>•</b> Encuestas Guía ll/lll</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle guía ll/lll</li>
+
+                                            <li style="font-size:18px"><b>•</b> Encuesta Guía V</li>
+                                            <li style="font-size:18px"><b>•</b> Detalle Guía V</li>-->
+                                        </ul>
+
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/menu-resultados.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+                                        <div class="row">
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                            <div class=" col-lg-6 col-sm-12 text-center">
+                                                <p style="font-size:18px">Para dirigirse a esta opción</p>
+                                                <a href="https://tlacontadores.com/Cuestionarios/Acceso.aspx?company=pruebac" class="button button-primary button-ujarak " style="width:100%"> de clic aquí</a>
+                                            </div>
+                                            <div class=" col-lg-3 col-sm-0 text-center"></div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso3  Resultados">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between" id="resultados">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados-Gráficos por Frecuencia </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Al ingresar a la opción de Gráficos por frecuencia nos mostrará una página donde se verán reflejados los resultados de las encuestas que el usuario empresa ha aplicado a sus trabajadores.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            Lo primero que notará es una sección, con 10 recuadros, cada uno nos mostrará información sobre las encuestas, cual es el total, cuantas hemos comenzado y cuantas están terminadas. Así mismo, nos mostrará el número de centros de trabajo, departamentos, total de empleados, acontecimientos traumáticos, constancias DC-3 y observaciones, de una forma más detallada y fácil de comprender.
+                                        </p>
+
+                                      
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/resultados.jpg" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+
+                                        <br />
+                                        <p class="text-justify" style="font-size:18px">
+                                            Después de esa sección, hay dos combo-box, el primero que es de todos los centros de trabajo y el segundo de todas las áreas de trabajo,
+                                            estos sirven para poder filtrar la información de los gráficos y centrarnos en las áreas o centros de trabajo que sean del mayor interés
+                                            o de mayor urgencia, una vez seleccionado el centro de trabajo y/o el área, procedemos a dar clic al botón de filtrar y en automático nos
+                                            mostrará solo los resultados de esa selección.
+                                        </p>
+                                        <p class="text-justify" style="font-size:18px">
+                                            También está disponible el botón de reporte, en donde podemos imprimir el reporte ya sea de todos los resultados o de la información ya filtrada.
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br />
+                    <div class="container-fluid">
+                        <div class="row text-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="../Cuestionarios/images/resultados-Bfiltrar.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="../Cuestionarios/images/reporteGlobal.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="container">
+
+
+                        <p class="text-justify" style="font-size:18px">
+                            La siguiente sección nos muestra los gráficos resultados por categorías, estas se dividen en 5, las cuales son:
+                        </p>
+                        <ul style="list-style:lower-alpha!important; padding-left:30px">
+                            <li style="font-size:18px"><b>•</b>	Ambiente de trabajo</li>
+                            <li style="font-size:18px"><b>•</b> Factores propios de la Actividad</li>
+                            <li style="font-size:18px"><b>•</b> Organización del tiempo de trabajo</li>
+                            <li style="font-size:18px"><b>•</b> Liderazgo y relaciones en el trabajo</li>
+                            <li style="font-size:18px"><b>•</b> Entorno organizacional</li>
+                            <!--<li style="font-size:18px"><b>•</b> Falta de control sobre el trabajo</li>
+        <li style="font-size:18px"><b>•</b> sin categoría</li>-->
+
+
+                        </ul>
+                        <br />
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/resultadosCategoria.jpg" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+                        <p class="text-justify" style="font-size:18px">
+                            En este apartado, también se pueden añadir pequeñas observaciones de cada categoría dándole clic a la gráfica en la que necesite dicha observación.
+                        </p>
+                        <br />
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/resultadosObservaciones.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+                        <p class="text-justify" style="font-size:18px">
+                            Después de la sección anterior, nos muestra la sección de Resultados por Dominio, esta funciona igual que la de categoría, solo que se divide por 10 dominios, los cuales son:
+                        </p>
+                        <br />
+
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/dominio.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+                        <p class="text-justify" style="font-size:18px">
+                            En este apartado, también se pueden añadir pequeñas observaciones de cada Dominio dándole clic a la gráfica en la que necesite dicha observación.
+                        </p>
+                        <br />
+
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/dominioObserv.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+                        <p class="text-justify" style="font-size:18px">
+                            En la última sección, se muestran los resultados por dimensión, estos se dividen en 26 y es donde se miden los resultados de dimensión de cada encuesta.
+                        </p>
+                        <br />
+
+                        <div class="text-center">
+                            <img src="../Cuestionarios/images/dimension.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                        </div>
+                        <br />
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso4">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Observación por Categoría</h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La segunda opción del submenú de resultados son las observaciones por categorías,
+                                            ahí se mostrarán las observaciones que se han agregado a los gráficos en la sección pasada.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se podrán editar y eliminar las observaciones mas no agregar nuevas, eso se hace en los gráficos.
+                                        </p>
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ObservCategoria.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- You dream — we embody-->
+        <section class="section section-sm bg-default text-md-left" id="paso5">
+            <div class="container-fluid">
+                <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+                    <div class="container">
+
+                        <div class="col-lg-12 col-xl-12 wow fadeInLeft">
+                            <h3 class="titulos" style=" text-transform:none">Menú del sistema: Resultados- Observación por Dominio </h3>
+                            <!-- Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                                <!-- Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link nav-link-big active" href="#tabs-6-1"
+                                           data-toggle="tab"></a>
+                                    </li>
+
+
+
+                                </ul>
+                                <!-- Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tabs-6-1">
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            La tercera opción del submenú de resultados al igual que la sección pasada son las observaciones,
+                                            pero en este caso son por dominio, ahí se mostrarán las observaciones que se han agregado a los gráficos en la sección pasada.
+                                        </p>
+
+                                        <p class="text-justify" style="font-size:18px">
+                                            En esta página se podrán editar y eliminar las observaciones mas no agregar nuevas, eso se hace en los gráficos.
+                                        </p>
+
+                                        <br />
+                                        <div class="text-center">
+                                            <img src="../Cuestionarios/images/ObservDominio.png" style="width:80%;  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;" />
+                                        </div>
+                                        <br />
+
+                                        <br />
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <br />
+        <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="/js/core.min.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- coded by Himic-->
+</body>
+
+</html>
