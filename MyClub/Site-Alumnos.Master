@@ -1,0 +1,420 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site-Alumnos.master.cs" Inherits="Sistema_web.Site_Alumnos" %>
+
+<%@ Register Assembly="DevExpress.Web.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <title>Más Control</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Content/images/MasControlCLUB.png" type="image/x-icon" />
+    <link href="/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<dx:ASPxLoadingPanel ID="LoadingSiteMaster" ClientInstanceName="LoadingSiteMaster" Text="Cargando" Modal="true" runat="server" ShowImage="true" Image-Url="/content/images/gif2.gif" Border-BorderColor="Transparent" Border-BorderWidth="0" BackColor="Transparent" Image-Width="150px" ImagePosition="Top" CssClass="shadow-none" Height="100%" Width="100%"></dx:ASPxLoadingPanel>
+    <script>
+          function MostarDistractor() {
+            LoadingSiteMaster.Show();
+        }
+    </script>
+<body id="body">
+    <style>
+        .dxmLite_Material .dxctToolbar_Material.dxm-main.dxmtb {
+    background-color: #f8f9fc;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-width: 0;
+}
+        @media screen and (min-width: 700px) {
+/*#wrapper{
+min-height:1340px
+}*/
+}
+         @media screen and (max-width: 600px) and (min-width:400px) {
+/*#wrapper{
+min-height:920px
+}*/
+}
+           @media screen and (max-width: 399px)  {
+/*#wrapper{
+min-height:720px
+}*/
+}
+    </style>
+    <style>
+    /*menu movil botton*/
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    will-change: transform;
+    transform: translateZ(0);
+    display: flex;
+    height: 60px;
+    box-shadow: 0 -2px 5px -2px #333;
+    background-color: #fff;
+}
+
+.mobile-bottom-nav__item {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-bottom-nav__item--active a {
+    color: #0090bf !important;
+}
+
+.mobile-bottom-nav__item-content {
+    display: flex;
+    flex-direction: column;
+    color:#0090bf
+}
+
+    .mobile-bottom-nav__item-content a {
+        color: #f7aa00;
+        margin-bottom: 0px !important
+    }
+        .mobile-bottom-nav__item-content a:hover {
+            color: #0090bf !important;
+            margin-bottom: 0px !important
+        }
+
+.movilicon {
+    font-style: normal !important;
+    font-size: 20px !important
+}
+
+@media screen and (min-width: 996px) {
+    .mobile-bottom-nav {
+        display: none;
+    }
+    #espacio{
+        display:none
+    }
+}
+@media screen and (max-width: 996px) {
+    .nav-menu-container {
+        display: none;
+    }
+   #sidebarToggleTop {
+        display: none;
+    }
+   #accordionSidebar{
+       display:none
+   }
+   footer{
+       display:none
+   }
+
+    /*html.rd-navbar-fixed-linked .page {
+        padding-top: 0px !important;
+    }*/
+}
+
+ .dropdown-menu  #menum.show {
+            display:inline!important;
+        }
+
+        .dropdown-menu  #menum[x-placement^="top"], .dropdown-menu  #menum[x-placement^="right"], .dropdown-menu  #menum[x-placement^="bottom"], .dropdown-menu  #menum[x-placement^="left"] {
+            right: auto;
+            bottom: auto;
+        }
+
+        .dropdown-menu #menum {
+            position: absolute;
+            top: -9px!important;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: none; 
+            min-width: 100%;
+           padding: 0rem 0!important; 
+            margin: 0rem 0 0!important; 
+            font-size: 1rem;
+            color: #888888;
+            text-align: center!important;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+             
+         ul, ol {
+            list-style: none;
+            padding: 0;
+            /* margin: 0; */
+        }
+        #menum #menum2{
+            display:inline-block!important
+        }
+
+        ol, ul, dl {
+            /* margin-top: 0; */
+            margin-bottom: 1rem;
+        }
+    </style>
+    <%=CargarCSS() %>
+    <script>      
+    window.onload = function ejemplo1() {
+        if (screen.width < 1380) {
+            document.getElementById("body").className = "sidebar-toggled";
+            document.getElementById("accordionSidebar").className += " toggled";
+        }
+        else {
+            document.getElementById("body").removeClass = "sidebar-toggled";
+            document.getElementById("accordionSidebar").removeClass = " toggled";
+        }
+    }
+    </script>
+    <form id="form1" runat="server">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion shadow-sm toggled" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.mascontrol.club/Default.aspx">
+                    <div class="sidebar-brand-icon">
+                        <%--<asp:Image ID="imgEmpresa" runat="server" alt="" />--%>
+                        <img alt="" src="/Content/images/MasControlCLUB.png" id="myImage" style="width: 100%; height: 100%" />
+
+                    </div>
+                </a>
+                             
+
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Plataforma
+                </div>
+                <li class="nav-item" id="EstadoCuenta">
+                    <a class="nav-link" href="/AlumnosySocios/EstadosDeCuenta.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-fw fa-table" style="font-size: 30px" id="icono"></i>
+                        <span>Estado de cuenta</span></a>
+                </li>
+                   <li class="nav-item" id="Hdeportivo">
+                    <a class="nav-link" href="/Historial/Deportivo.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-running" style="font-size: 30px" id="icono2"></i>
+                        <span>Historial Deportivo</span></a>
+                </li>
+                     <li class="nav-item" id="Hmedico">
+                    <a class="nav-link" href="/Historial/Medico.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-medkit" style="font-size: 30px" id="icono3"></i>
+                        <span>Historial Medico</span></a>
+                </li>
+                <br />
+                <br />
+                <div class="text-center d-none d-md-inline">
+                    <button type="button" class="rounded-circle border-0" id="sidebarToggle" onclick="changeImage()"></button>
+                </div>
+
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" type="button" class="btn btn-link d-md-none rounded-circle mr-3" onclick="changeImage()">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <!-- Nav Item - Messages -->
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope fa-fw"></i>
+
+                                    <span class="badge badge-danger badge-counter">
+                                        <asp:Label ID="lblContadorAvisos" runat="server" Text="0"></asp:Label></span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header">Mensajes del sistema</h6>
+                                    <asp:Repeater ID="repeaterMensajes" runat="server">
+                                        <ItemTemplate>
+                                            <a class="dropdown-item d-flex align-items-center">
+                                                <div>
+                                                    <div class="text"><%#Eval("Titulo") %></div>
+                                                    <div class="small text-gray-500"><%#Eval("Mensaje") %></div>
+                                                </div>
+                                            </a>
+                                        </ItemTemplate>
+
+                                    </asp:Repeater>
+
+
+                                    <a class="dropdown-item text-center small text-gray-500" href="/Mensajeria/MensajeriaPorEmpresa.aspx" style="background-color: white">Más mensajes</a>
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                        <asp:Label ID="lblNombreUsuario" runat="server" Style="color: white" Text=""></asp:Label>
+                                    </span>
+                                    <asp:Image ID="imgUsuario" runat="server" class="img-profile rounded-circle" />
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="/cuenta/perfil-alumno.aspx" onclick="MostarDistractor()"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cerrar sesión
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <nav class="mobile-bottom-nav">
+                        <div class="mobile-bottom-nav__item ">
+                            <div class="mobile-bottom-nav__item-content ">
+                                <a href="/Facturas/Facturas-Alumno.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-table movilicon"></i></a>
+                                Estado de cuenta
+                            </div>
+                        </div>
+                       
+                      
+                    
+
+                    </nav>
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white-Footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto" style="color: white">
+                            <span>Copyright &copy; Sicma Controles 2020</span>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Cerrar Sesión</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">¿Estás seguro que deseas cerrar sesión?</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-cancelar" type="button" data-dismiss="modal">Cancelar</button>
+                        <asp:LinkButton ID="btnLogOut" class="btn btn-salir" runat="server" OnClick="lbtnCerrarSesion_Click">Salir</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/Content/js/sb-admin-2.min.js"></script>
+    <script>
+                function changeImage() {
+                    var image = document.getElementById('myImage');
+                    if (image.src.match("/Content/images/MasControlCLUB.png")) {
+                        image.src = " /Content/images/logo-mascontrol.png";
+                    } else {
+                        image.src = "/Content/images/MasControlCLUB.png";
+                    }
+                     var iconos = document.getElementById("icono");
+            if (iconos.style.fontSize.match("30px")) {
+                iconos.style.fontSize = "20px";
+            } else {
+                iconos.style.fontSize = "30px";
+                    }
+                                var iconos2 = document.getElementById("icono2");
+            if (iconos2.style.fontSize.match("30px")) {
+                iconos2.style.fontSize = "20px";
+            } else {
+                iconos2.style.fontSize = "30px";
+                    }
+                                var iconos3 = document.getElementById("icono3");
+            if (iconos3.style.fontSize.match("30px")) {
+                iconos3.style.fontSize = "20px";
+            } else {
+                iconos3.style.fontSize = "30px";
+            }
+                
+         }
+    </script>
+</body>
+</html>

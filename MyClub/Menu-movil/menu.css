@@ -1,0 +1,227 @@
+﻿
+
+.fa-2x {
+    font-size: 26px;
+}
+
+.menu-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    will-change: transform;
+    transform: translateZ(0);
+    display: flex;
+    height: 83px;
+    box-shadow: 0 -2px 5px -2px #33333336;
+    background-color: #fff;
+}
+
+.menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.menum.active {
+    color: #fff;
+}
+
+.menum i {
+    color: #172d78 !important;
+}
+
+#label1 {
+    /*color: #ffb891;*/
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    transition: 0.25s ease-in;
+    margin-bottom: 0rem !important
+}
+
+#label2 {
+    /*color: #ffb891;*/
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    transition: 0.25s ease-in;
+    margin-bottom: 0rem !important
+}
+
+#label3 {
+    /*color: #ffb891;*/
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    transition: 0.25s ease-in;
+    margin-bottom: 0rem !important
+}
+
+#label4 {
+    /*color: #ffb891;*/
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    transition: 0.25s ease-in;
+    margin-bottom: 0rem !important
+}
+
+.item {
+    text-align: center;
+}
+
+.item-title {
+    margin-top: 5px;
+    margin-bottom: -6px;
+    color: #000;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.blob-container {
+    position: absolute;
+    z-index: 0;
+    width: 25%;
+    transition: transform 0.2s ease-out;
+}
+
+.blob {
+    background: linear-gradient(90deg,#052566, #16377a);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 2px auto;
+}
+
+.input .active, #label1 i, #label2 i, #label3 i, #label4 i {
+    color: #f7aa00 !important;
+}
+
+.tab.active {
+    background: linear-gradient(90deg,#0090bf, #0379a1);
+    width: 50px;
+}
+
+    .tab.active .item-title {
+        color: white
+    }
+
+/*.input .active ~ .blob-container .blob {
+        animation: scaleY-0 0.2s linear;
+    }*/
+
+/*input[id=radio-1] .active ~ .blob-container {
+    transform: translateX(100%);
+}
+
+    input[id=radio-1] .active ~ .blob-container .blob {
+        animation: scaleY-1 0.2s linear;
+    }
+
+input[id=radio-2] .active ~ .blob-container {
+    transform: translateX(200%);
+}
+
+    input[id=radio-2] .active ~ .blob-container .blob {
+        animation: scaleY-2 0.2s linear;
+    }
+
+input[id=radio-3] .active ~ .blob-container {
+    transform: translateX(300%);
+}
+
+    input[id=radio-3] .active ~ .blob-container .blob {
+        animation: scaleY-3 0.2s linear;
+    }*/
+
+@keyframes scaleY-0 {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scaleY(0.5) translateY(30px);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scaleY-1 {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scaleY(0.5) translateY(-30px);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scaleY-2 {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scaleY(0.5) translateY(30px);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scaleY-3 {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scaleY(0.5) translateY(-30px);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+
+    .menu-container {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+}

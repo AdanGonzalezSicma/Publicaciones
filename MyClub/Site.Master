@@ -1,0 +1,867 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Sistema_web.Site" %>
+
+<%@ Register Assembly="DevExpress.Web.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <title>Más Control</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Content/images/MasControlCLUB.png" type="image/x-icon" />
+
+    <%--<title>Más Control Club</title>--%>
+
+    <!-- Custom fonts for this template-->
+    <link href="/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="Menu-movil/menu.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+    <%--<link href="/Content/css/adminlte.min.css" rel="stylesheet">--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head> 
+    <dx:ASPxLoadingPanel ID="LoadingSiteMaster" ClientInstanceName="LoadingSiteMaster" Text="Cargando" Modal="true" runat="server" ShowImage="true" Image-Url="/content/images/gif2.gif" Border-BorderColor="Transparent" Border-BorderWidth="0" BackColor="Transparent" Image-Width="150px" ImagePosition="Top" CssClass="shadow-none" Height="100%" Width="100%"></dx:ASPxLoadingPanel>
+<script>      
+    window.onload = function ejemplo1() {
+        if (screen.width < 1380) {
+            document.getElementById("body").className = "sidebar-toggled";
+            document.getElementById("accordionSidebar").className += " toggled";
+        }
+        else {
+            document.getElementById("body").removeClass = "sidebar-toggled";
+            document.getElementById("accordionSidebar").removeClass = " toggled";
+        }
+
+    }
+     function MostarDistractor() {
+            LoadingSiteMaster.Show();
+        }
+</script>
+
+<body id="body">
+   
+    <style>
+        .dxmLite_Material .dxctToolbar_Material.dxm-main.dxmtb {
+            background-color: #f8f9fc;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            border-width: 0;
+        }
+
+        .dxgvControl_Material, .dxgvDisabled_Material {
+            font: 14px 'Roboto Regular', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+            background-color: #f8f9fc !important;
+            color: #484848;
+            cursor: default;
+        }
+
+        @media screen and (min-width: 700px) {
+            #wrapper {
+                min-height: 1340px
+            }
+        }
+
+        @media screen and (max-width: 600px) and (min-width:400px) {
+            #wrapper {
+                min-height: 920px
+            }
+        }
+
+        @media screen and (max-width: 399px) {
+            #wrapper {
+                min-height: 720px
+            }
+        }
+    </style>
+    <style>
+        /*menu movil botton*/
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            will-change: transform;
+            transform: translateZ(0);
+            display: flex;
+            height: 60px;
+            box-shadow: 0 -2px 5px -2px #333;
+            background-color: #fff;
+        }
+
+        .mobile-bottom-nav__item {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mobile-bottom-nav__item--active a {
+            color: #0090bf !important;
+        }
+
+        .mobile-bottom-nav__item-content {
+            display: flex;
+            flex-direction: column;
+            color: #0090bf
+        }
+
+            .mobile-bottom-nav__item-content a {
+                color: #f7aa00;
+                margin-bottom: 0px !important
+            }
+
+                .mobile-bottom-nav__item-content a:hover {
+                    color: #0090bf !important;
+                    margin-bottom: 0px !important
+                }
+
+        .movilicon {
+            font-style: normal !important;
+            font-size: 20px !important
+        }
+
+        @media screen and (min-width: 996px) {
+            .mobile-bottom-nav {
+                display: none;
+            }
+
+            #espacio {
+                display: none
+            }
+        }
+
+        @media screen and (max-width: 996px) {
+            .nav-menu-container {
+                display: none;
+            }
+
+            #sidebarToggleTop {
+                display: none;
+            }
+
+            #accordionSidebar {
+                display: none
+            }
+
+            footer {
+                display: none
+            }
+
+            /*html.rd-navbar-fixed-linked .page {
+        padding-top: 0px !important;
+    }*/
+        }
+
+        .dropdown-menu #menum.show {
+            display: inline !important;
+        }
+
+        .dropdown-menu #menum[x-placement^="top"], .dropdown-menu #menum[x-placement^="right"], .dropdown-menu #menum[x-placement^="bottom"], .dropdown-menu #menum[x-placement^="left"] {
+            right: auto;
+            bottom: auto;
+        }
+
+        .dropdown-menu #menum {
+            position: absolute;
+            top: -9px !important;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: none;
+            min-width: 100%;
+            padding: 0rem 0 !important;
+            margin: 0rem 0 0 !important;
+            font-size: 1rem;
+            color: #888888;
+            text-align: center !important;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            /* margin: 0; */
+        }
+
+        #menum #menum2 {
+            display: inline-block !important
+        }
+
+        ol, ul, dl {
+            /* margin-top: 0; */
+            margin-bottom: 1rem;
+        }
+
+.loader2 {
+    position: fixed;
+    left: 0px;
+    background-position-y:center;
+    background-position-x:center;
+    top: 43%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+        .loader2 {
+            position: fixed;
+            left: 0px;
+            top: 44%;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+    </style>
+    <%=CargarCSS() %>
+    <form id="form1" runat="server">
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion shadow-sm toggled" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://www.mascontrol.club/Default.aspx">
+                    <div class="sidebar-brand-icon">
+                        <%--<asp:Image ID="imgEmpresa" runat="server" alt="" />--%>
+                        <img alt="" src="/Content/images/MasControlCLUB.png" id="myImage" style="width: 100%; height: 100%" />
+
+                    </div>
+                </a>
+
+                <!-- Divider -->
+                <%--   <hr class="sidebar-divider my-0">--%>
+
+
+                <%@ Import Namespace="Sistema_web.Modelo" %>
+                <% 
+                    HttpContext context = HttpContext.Current;
+                    using (var oContext = new MyClubEntities())
+                    {
+                        int _OIDRol = Convert.ToInt32(context.Session["OIDRol"].ToString());
+                        var oRol = oContext.OpeUsuariosRoles.FirstOrDefault(ss => ss.idRol == _OIDRol);
+                %>
+                <!-- Nav Item - Dashboard -->
+                <%if (oRol.VerDashboardCompleto.Value)
+                    { %>
+                <li class="nav-item" id="dash">
+                    <a class="nav-link" href="/informacion/dashboard.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-tachometer-alt" style="font-size: 30px" id="icono"></i><span>Dashboard</span></a>
+                </li>
+                <%} %>
+                <%if (oRol.VerDashboardEstudiante.Value)
+                    { %>
+                <li class="nav-item" id="dash">
+                    <a class="nav-link" href="/informacion/Alumnos/dashboard.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-tachometer-alt" style="font-size: 30px" id="icono"></i><span>Dashboard</span></a>
+                </li>
+                <%} %>
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Interface
+                </div>
+                <%if (oRol.VerCentrosEntrenamiento.Value)
+                    { %>
+                <!-- Nav Item - Tables -->
+                <li class="nav-item" id="Entrenamientos">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Configuracion/Centros_de_Entrenamiento.aspx") ? "active" : "" %>" href="/Configuracion/Centros_de_Entrenamiento.aspx"  onclick="MostarDistractor()">
+                        <i class="fas fa-fw fa-building" style="font-size: 30px" id="icono2"></i>
+                        <span>Centros de Entrenamiento</span></a>
+                </li>
+                <%} %>
+                <%if (oRol.VerHistorialDeportivo.Value)
+                    { %>
+                <!-- Nav Item - Tables -->
+                <li class="nav-item" id="HistorialDeportivo">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Historial/Deportivo.aspx") ? "active" : "" %>" href="/Historial/Deportivo.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-fw fa-table" style="font-size: 30px" id="icono2"></i>
+                        <span>Historial Deportivo</span></a>
+                </li>
+                <%} %>
+                <%if (oRol.VerHistorialMedico.Value)
+                    { %>
+                <!-- Nav Item - Tables -->
+                <li class="nav-item" id="HistorialMedico">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Historial/Medico.aspx") ? "active" : "" %>" href="/Historial/Medico.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-fw fa-table" style="font-size: 30px" id="icono2"></i>
+                        <span>Historial Médico</span></a>
+                </li>
+                <%} %>
+                <%if (oRol.VerAlumnosSocios.Value)
+                    { %>
+                <li class="nav-item" id="Alumnos">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/AlumnosySocios/Alumnos.aspx") || Request.RawUrl.Contains("/AlumnosySocios/Padres-Tutores.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesAlumnos" aria-expanded="true" aria-controls="collapsePagesAlumnos">
+
+                        <i class="fas fa-fw fa-users" style="font-size: 30px" id="icono3"></i>
+                        <span>Alumnos</span>
+                    </a>
+                    <div id="collapsePagesAlumnos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/AlumnosySocios/Alumnos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/AlumnosySocios/Alumnos.aspx" onclick="MostarDistractor()">Alumnos</a>
+                            <a class="<%= Request.RawUrl.Contains("/AlumnosySocios/Padres-Tutores.aspx") ? "collapse-item active" : "collapse-item" %>" href="/AlumnosySocios/Padres-Tutores.aspx" onclick="MostarDistractor()">Padres-Tutores</a>
+                            <%--  <a class="<%= Request.RawUrl.Contains("/Facturas/Facturas-Alumnos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Club/EstadoDeCuenta.aspx">Estados de cuenta</a>--%>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" id="Estadosdecuenta">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Club/EstadoDeCuenta.aspx") ? "active" : "" %>" href="/Club/EstadoDeCuenta.aspx" onclick="MostarDistractor()">
+                        <i class="fas fa-fw fa-file-invoice-dollar" style="font-size: 30px" id="icono4"></i>
+                        <span>Estados de cuenta</span></a>
+                </li>
+                <%--   <li class="nav-item" id="Estadosdecuenta">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/AlumnosySocios/Alumnos.aspx") || Request.RawUrl.Contains("/AlumnosySocios/Padres-Tutores.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePageEstadosCuenta" aria-expanded="true" aria-controls="collapsePageEstadosCuenta">
+
+                        <i class="fas fa-fw fa-file-invoice-dollar" style="font-size: 30px" id="icono3"></i>
+                        <span>Estados de cuenta</span>
+                    </a>
+                    <div id="collapsePageEstadosCuenta" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Facturas/Facturas-Alumnos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Facturas/Facturas-Alumnos.aspx">Alumnos</a>
+                            <%--<a class="<%= Request.RawUrl.Contains("/Facturas/Facturas-Clubes.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Facturas/Facturas-Clubes.aspx">Clubes</a>
+                        </div>
+                    </div>
+                </li>--%>
+                <%} %>
+                <%if (oRol.VerMembresias.Value)
+                    { %>
+                <li class="nav-item" id="Membresias">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Membresias/Membresias.aspx")||Request.RawUrl.Contains("/Membresias/Cargos.aspx")||Request.RawUrl.Contains("/Membresias/Pagos.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesMembrecias" aria-expanded="true" aria-controls="collapsePagesMembrecias">
+                        <i class="fas fa-fw fa-id-card" style="font-size: 30px" id="icono5"></i>
+                        <span>Membresías</span>
+                    </a>
+                    <div id="collapsePagesMembrecias" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Membresias/Membresias.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Membresias/Membresias.aspx" onclick="MostarDistractor()">Membresías</a>
+                            <a class="<%= Request.RawUrl.Contains("/Membresias/Alumnos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Membresias/Alumnos.aspx" onclick="MostarDistractor()">Alumnos</a>
+                            <a class="<%= Request.RawUrl.Contains("/Membresias/Cargos-Abonos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Membresias/Cargos-Abonos.aspx" onclick="MostarDistractor()">Cargos y Abonos</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" id="Gastos">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Gastos/Gastos.aspx")||Request.RawUrl.Contains("/Gastos/Gastos-tipo.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesGastos" aria-expanded="true" aria-controls="collapsePagesGastos">
+                        <i class="fas fa-fw fa-money-bill" style="font-size: 30px" id="icono6"></i>
+                        <span>Gastos</span>
+                    </a>
+                    <div id="collapsePagesGastos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Gastos/Gastos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Gastos/Gastos.aspx" onclick="MostarDistractor()">Gastos</a>
+                            <a class="<%= Request.RawUrl.Contains("/Gastos/Gastos-tipo.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Gastos/Gastos-tipo.aspx" onclick="MostarDistractor()">Tipo de Gastos</a>
+                        </div>
+                    </div>
+                </li>
+                <%} %>
+                <%if (oRol.VerEventosDiversos.Value)
+                    { %>
+                <li class="nav-item" id="Eventos">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Eventos/Eventos.aspx")|| Request.RawUrl.Contains("/Eventos/Uniformes-Accesorios.aspx")|| Request.RawUrl.Contains("/Eventos/Pagos.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesEventos" aria-expanded="true" aria-controls="collapsePagesEventos">
+                        <i class="fas fa-fw fa-calendar" style="font-size: 30px" id="icono7"></i>
+                        <span>Eventos y Diversos</span>
+                    </a>
+                    <div id="collapsePagesEventos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Eventos/Eventos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Eventos/Eventos.aspx"  onclick="MostarDistractor()">Eventos</a>
+                            <a class="<%= Request.RawUrl.Contains("/Eventos/Uniformes-Accesorios.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Eventos/Uniformes-Accesorios.aspx" onclick="MostarDistractor()">Uniformes y Accesorios</a>
+                            <a class="<%= Request.RawUrl.Contains("/Eventos/Pagos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Eventos/Pagos.aspx" onclick="MostarDistractor()">Pagos</a>
+                        </div>
+                    </div>
+                </li>
+                <%} %>
+                <%if (oRol.VerEntrenamientoPersonalizado.Value)
+                    { %>
+                <li class="nav-item" id="EntrenamientosP">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Entrenamientos/Alumnos.aspx")||Request.RawUrl.Contains("/Entrenamientos/Pagos.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesEntrenamientos" aria-expanded="true" aria-controls="collapsePagesEntrenamientos">
+                        <i class="fas fa-fw fa-futbol" style="font-size: 30px" id="icono8"></i>
+                        <span>Entrenamientos Personalizados</span>
+                    </a>
+                    <div id="collapsePagesEntrenamientos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Personalizados/Entrenadores-asistentes.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Personalizados/Entrenadores-asistentes.aspx" onclick="MostarDistractor()">Entrenadores/asistentes</a>
+                            <a class="<%= Request.RawUrl.Contains("/Personalizados/Entrenamientos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Personalizados/Entrenamientos.aspx" onclick="MostarDistractor()">Entrenamientos</a>
+                            <a class="<%= Request.RawUrl.Contains("/Personalizados/Inscripciones.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Personalizados/Inscripciones.aspx" onclick="MostarDistractor()">Inscripción a Personalizados</a>
+                            <a class="<%= Request.RawUrl.Contains("/Entrenamientos/Alumnos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Personalizados/Alumnos.aspx" onclick="MostarDistractor()">Alumnos</a>
+                            <a class="<%= Request.RawUrl.Contains("/Entrenamientos/Pagos.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Entrenamientos/Pagos.aspx" onclick="MostarDistractor()">Pagos</a>
+                        </div>
+                    </div>
+                </li>
+                <%} %>
+                <%if (oRol.VerEvaluacionesAltoRendimiento.Value)
+                    { %>
+                <li class="nav-item" id="EvaluacionesAltoR">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Evaluaciones/Agilidad.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePagesEvaluaciones" aria-expanded="true" aria-controls="collapsePagesEvaluaciones">
+                        <i class="fas fa-fw fa-folder" style="font-size: 30px" id="icono9"></i>
+                        <span>Evaluaciones de Alto Rendimiento</span>
+                    </a>
+                    <div id="collapsePagesEvaluaciones" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Agilidad.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Agilidad</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Resistencia.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Resistencia</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Fuerza.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Fuerza</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Composicion.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Composición Corporal</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Movilidad-Equilibrio.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Movilidad y Equilibrio</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Velocidad-Potencia.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Velocidad y Potencia</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Psicología.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Psicología</a>
+
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Salud-Deportista.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Salud del deportista</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Nutricion.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Nutrición y Gasto Calórico</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Otras-Habilidades.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Otras Habilidades</a>
+                            <a class="<%= Request.RawUrl.Contains("/Evaluaciones/Estadisticas-Desempenio.aspx") ? "collapse-item active" : "collapse-item" %>" href="#">Estadísticas / Desempeño</a>
+                        </div>
+                    </div>
+                </li>
+                <%} %>
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+                <% if (oRol.VerConfiguracion.Value)
+                    {%>
+                <li class="nav-item" id="Config">
+                    <a class="nav-link <%= Request.RawUrl.Contains("/Configuracion/Empresas.aspx") ? "active" : "" %>" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-fw fa-folder" style="font-size: 30px" id="icono10"></i>
+                        <span>Configuración</span>
+                    </a>
+                    <div id="collapsePages" class="collapse <%= Request.RawUrl.Contains("/Configuracion/Empresas.aspx") ? "show" : "" %>" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-submenu py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opciones:</h6>
+                            <a class="<%= Request.RawUrl.Contains("/Configuracion/Empresas.aspx") ? "collapse-item active" : "collapse-item" %>" href="/Configuracion/Empresas.aspx">Empresas</a>
+                        </div>
+                    </div>
+                </li>
+                <%}
+                %>
+                <!-- Nav Item - Tables -->
+                <%--  <li class="nav-item">
+                    <a class="nav-link" href="/index.aspx" target="_blank">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Página</span></a>
+                </li>--%>
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button type="button" class="rounded-circle border-0" id="sidebarToggle" onclick="changeImage()"></button>
+                </div>
+
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" type="button" class="btn btn-link d-md-none rounded-circle mr-3" onclick="changeImage()">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <!-- Nav Item - Messages -->
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-envelope fa-fw"></i>
+
+                                    <span class="badge badge-danger badge-counter">
+                                        <asp:Label ID="lblContadorAvisos" runat="server" Text="0"></asp:Label></span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header">Mensajes del sistema</h6>
+                                    <asp:Repeater ID="repeaterMensajes" runat="server">
+                                        <ItemTemplate>
+                                            <a class="dropdown-item d-flex align-items-center">
+                                                <div>
+                                                    <div class="text"><%#Eval("Titulo") %></div>
+                                                    <div class="small text-gray-500"><%#Eval("Mensaje") %></div>
+                                                </div>
+                                            </a>
+                                        </ItemTemplate>
+
+                                    </asp:Repeater>
+
+
+                                    <a class="dropdown-item text-center small text-gray-500" href="/Mensajeria/MensajeriaPorEmpresa.aspx" style="background-color: white">Más mensajes</a>
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                        <asp:Label ID="lblNombreUsuario" runat="server" Style="color: white" Text=""></asp:Label>
+                                    </span>
+                                    <asp:Image ID="imgUsuario" runat="server" class="img-profile rounded-circle" />
+                                </a>
+                                <% if (!oRol.VerDashboardEstudiante.Value)
+                                    {%>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="/cuenta/perfil-usuario.aspx" onclick="MostarDistractor()"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/Facturas/Facturas.aspx" onclick="MostarDistractor()">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Mis Facturas
+                                    </a>
+                                    <%if (oRol.VerEmpresas.Value)
+                                    { %>
+                                    <a class="dropdown-item" href="/Facturas/Facturas-Clubes.aspx" onclick="MostarDistractor()">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Facturas Clubes</a>
+                                    <%} %>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cerrar sesión
+                                    </a>
+                                </div>
+                                <%} %>
+                                <% if (oRol.VerDashboardEstudiante.Value)
+                                    {%>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="/cuenta/perfil-alumno.aspx"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/AlumnosySocios/Facturacion.aspx" onclick="MostarDistractor()">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Mis Facturas
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cerrar sesión
+                                    </a>
+                                </div>
+                                <%} %>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+
+
+
+
+
+
+
+                      <div class="menu-container">
+
+              <div class="menu" id="menu">
+
+                  <input type="radio" id="radio-0 panel" name="menu" class="inp" />
+                  <label class="tab tab1" for="radio-0" id="label1">
+                      <div class="item">
+                          <a href="/Informacion/Dashboard.aspx" class="menum" id="menum" onclick="MostarDistractor()">
+                              <i class="fas fa-fw fa-tachometer-alt fa-2x"></i>
+                              <div class="item-title">Dashboard</div>
+                          </a>
+                      </div>
+                  </label>
+
+                  <input type="radio" id="radio-1 agenda" name="menu"  class="inp" />
+                  <label class="tab tab2" for="radio-1" id="label2">
+                      <div class="item">
+                          <a href="/Configuracion/Centros_de_Entrenamiento.aspx" class="menum" onclick="MostarDistractor()">
+                              <i class="fas fa-fw fa-building fa-2x"></i>
+                              <div class="item-title"> Centros Entren</div>
+                              </a>
+                      </div>
+                  </label>
+
+                  <input type="radio" id="radio-2 lead" name="menu"  class="inp" />
+                  <label class="tab tab3" for="radio-2" id="label3">
+                      <div class="item">
+                          <a href="/menu-movil/Alumnos-Socios.aspx" class="menum" onclick="MostarDistractor()">
+                              <i class="fas fa-fw fa-users fa-2x"></i>
+                              <div class="item-title"> Alumnos/Socios</div>
+                              </a>
+                      </div>
+                  </label>
+
+                  <input type="radio" id="radio-3 mas" name="menu"  class="inp" />
+                  <label class="tab tab4" for="radio-3" id="label4">
+                      <div class="item">
+                          <a href="/Menu-movil/menu.aspx" class="menum" onclick="MostarDistractor()">
+                              <i class="fas fa-bars fa-2x"></i>
+                              <div class="item-title">Más</div>
+                              </a>
+                      </div>
+                  </label>
+
+                  <%--<div class="blob-container">
+                      <div class="blob"></div>
+                  </div>--%>
+
+              </div>
+          </div>
+
+                  <%--  <nav class="mobile-bottom-nav">
+                        <div class="mobile-bottom-nav__item ">
+                            <div class="mobile-bottom-nav__item-content ">
+                                <a href="/Informacion/Dashboard.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-tachometer-alt movilicon"></i></a>
+                                Dashboard
+                            </div>
+                        </div>
+                        <div class="mobile-bottom-nav__item ">
+                            <div class="mobile-bottom-nav__item-content ">
+                                <a href="/Configuracion/Centros_de_Entrenamiento.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-building movilicon"></i></a>
+                                Centros Entren
+                            </div>
+                        </div>
+                        <div class="mobile-bottom-nav__item ">
+                            <div class="mobile-bottom-nav__item-content ">
+                                <a href="/menu-movil/Alumnos-Socios.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-users movilicon"></i></a>
+                                Alumnos/Socios
+                            </div>
+                        </div>
+
+                        <div class="mobile-bottom-nav__item ">
+                            <div class="mobile-bottom-nav__item-content ">
+                                <a href="/menu-movil/membresias.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-id-card movilicon"></i></a>
+                                Membresías
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="mobile-bottom-nav__item">
+                            <div class="mobile-bottom-nav__item-content" id="dropnivel1">
+                                <a class="rd-nav-link " data-toggle="dropdown" id="dropnivel1-2"><i class="fa fa-bars movilicon" aria-hidden="true"></i></a>
+                                más
+                        <ul class="dropdown-menu" id="menum" style="text-align: center!important; position: absolute; will-change: transform; top: -17px!important; left: 0px; right: 0; transform: translate3d(-5px, -258px, 0px); padding: 0!important; margin: 0!important; border-bottom: none; border-right: none">
+
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item">
+                                    <div class="mobile-bottom-nav__item-content">
+                                        <a href="/menu-movil/Eventos-diversos.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-calendar movilicon"></i></a>
+                                        Eventos y diversos
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item ">
+                                    <div class="mobile-bottom-nav__item-content ">
+                                        <a href="/Club/EstadoDeCuenta.aspx" style="padding-bottom: 0px!important" onclick="MostarDistractor()"><i class="fas fa-fw fa-file-invoice-dollar movilicon"></i></a>
+                                        Estado de cuenta
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item">
+                                    <div class="mobile-bottom-nav__item-content">
+                                        <a href="/menu-movil/gastos.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-money-bill movilicon"></i></a>
+                                        Gastos
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item">
+                                    <div class="mobile-bottom-nav__item-content">
+                                        <a href="/menu-movil/Entrenamientos-personalizados.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-futbol movilicon"></i></a>
+                                        Entren. personalizados
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item">
+                                    <div class="mobile-bottom-nav__item-content">
+                                        <a href="/menu-movil/Eval-alto-rendimiento.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-folder movilicon"></i></a>
+                                        Eval. de alto rendimiento
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rd-nav-item" style="margin: 10px" id="menum2">
+                                <div class="mobile-bottom-nav__item">
+                                    <div class="mobile-bottom-nav__item-content">
+                                        <a href="/default.aspx" onclick="MostarDistractor()"><i class="fas fa-fw fa-cog movilicon"></i></a>
+                                        Configuración
+                                    </div>
+                                </div>
+                            </li>
+
+
+
+
+
+                        </ul>
+                            </div>
+                        </div>
+
+                    </nav>--%>
+                    <!-- End of Topbar -->
+
+                    <%} %>
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white-Footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto" style="color: white">
+                            <span>Copyright &copy; Sicma Controles 2020</span>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: white">Cerrar Sesión</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">¿Estás seguro que deseas cerrar sesión?</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-cancelar" type="button" data-dismiss="modal">Cancelar</button>
+                        <asp:LinkButton ID="btnLogOut" class="btn btn-salir" runat="server" OnClick="lbtnCerrarSesion_Click">Salir</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/Content/js/sb-admin-2.min.js"></script>
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("/Content/images/MasControlCLUB.png")) {
+                image.src = " /Content/images/logo-mascontrol.png";
+            } else {
+                image.src = "/Content/images/MasControlCLUB.png";
+            }
+            var iconos = document.getElementById("icono");
+            if (iconos.style.fontSize.match("30px")) {
+                iconos.style.fontSize = "20px";
+            } else {
+                iconos.style.fontSize = "30px";
+            }
+            var iconos2 = document.getElementById("icono2");
+            if (iconos2.style.fontSize.match("30px")) {
+                iconos2.style.fontSize = "20px";
+            } else {
+                iconos2.style.fontSize = "30px";
+            }
+            var iconos3 = document.getElementById("icono3");
+            if (iconos3.style.fontSize.match("30px")) {
+                iconos3.style.fontSize = "20px";
+            } else {
+                iconos3.style.fontSize = "30px";
+            }
+            var iconos4 = document.getElementById("icono4");
+            if (iconos4.style.fontSize.match("30px")) {
+                iconos4.style.fontSize = "20px";
+            } else {
+                iconos4.style.fontSize = "30px";
+            }
+            var iconos5 = document.getElementById("icono5");
+            if (iconos5.style.fontSize.match("30px")) {
+                iconos5.style.fontSize = "20px";
+            } else {
+                iconos5.style.fontSize = "30px";
+            }
+            var iconos6 = document.getElementById("icono6");
+            if (iconos6.style.fontSize.match("30px")) {
+                iconos6.style.fontSize = "20px";
+            } else {
+                iconos6.style.fontSize = "30px";
+            }
+            var iconos7 = document.getElementById("icono7");
+            if (iconos7.style.fontSize.match("30px")) {
+                iconos7.style.fontSize = "20px";
+            } else {
+                iconos7.style.fontSize = "30px";
+            }
+            var iconos8 = document.getElementById("icono8");
+            if (iconos8.style.fontSize.match("30px")) {
+                iconos8.style.fontSize = "20px";
+            } else {
+                iconos8.style.fontSize = "30px";
+            }
+            var iconos9 = document.getElementById("icono9");
+            if (iconos9.style.fontSize.match("30px")) {
+                iconos9.style.fontSize = "20px";
+            } else {
+                iconos9.style.fontSize = "30px";
+            }
+            var iconos10 = document.getElementById("icono10");
+            if (iconos10.style.fontSize.match("30px")) {
+                iconos10.style.fontSize = "20px";
+            } else {
+                iconos0.style.fontSize = "30px";
+            }
+        }
+    </script>
+</body>
+</html>

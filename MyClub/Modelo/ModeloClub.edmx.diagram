@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="76ac95bca74447a9bd81e8d07285039a" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="MyClubModel.CatAvisos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyClubModel.CatCodigosPostales" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyClubModel.CatEntidadFederativa" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyClubModel.CatMunicipios" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyClubModel.OpeUsuarios" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyClubModel.OpeEmpresasAsignadas" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatDisciplinas" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAtletas" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatDisciplinasNiveles" Width="1.5" PointX="11.375" PointY="10.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatFrecuenciasPago" Width="1.5" PointX="7.375" PointY="12.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatTipoAtencionClinica" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatTipoEventoDeportivo" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubClubsCentrosEntrenamiento" Width="2.125" PointX="9.375" PointY="13.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAlumnosHistorialMedico" Width="2.125" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatTipoAlumno" Width="1.5" PointX="13.375" PointY="11.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubMembresias" Width="1.5" PointX="12.375" PointY="14.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizadosAlumnos" Width="2.5" PointX="18" PointY="14.625" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizadosCargosAbonos" Width="2" PointX="17.375" PointY="4.75" />
+        <EntityTypeShape EntityType="MyClubModel.CatTemas" Width="1.5" PointX="9.375" PointY="18.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubClubs" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.OpeMembresias" Width="2.75" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubMembresiasCargosAbonos" Width="1.875" PointX="15" PointY="8.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAlumnosHistorialDeportivo" Width="2.125" PointX="15" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.OpeUsuarioDatosGenerales" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizados" Width="1.5" PointX="3.375" PointY="14.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubEntrenadoresHorarios" Width="1.5" PointX="5.375" PointY="15.75" />
+        <EntityTypeShape EntityType="MyClubModel.OpeUsuariosRoles" Width="1.5" PointX="17.375" PointY="8.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubComprobantePago" Width="2.375" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyClubModel.OpeClubCargosAbonos" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAlumnosCargosAbonosConcepto" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAlumnosCargosAbonos" Width="2.625" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubMembresiasAlumnos" Width="1.5" PointX="14.375" PointY="14.75" />
+        <EntityTypeShape EntityType="MyClubModel.CATTipoGasto" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubGastos" Width="1.5" PointX="2.75" PointY="19.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubRegistroConsultas" Width="1.5" PointX="5.375" PointY="19.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubAlumnos" Width="1.5" PointX="11.375" PointY="18.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubEntrenadoresDatosPersonales" Width="1.5" PointX="19.375" PointY="8.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubEntrenadores" Width="1.5" PointX="13.375" PointY="20.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubEventoDeportivo" Width="1.5" PointX="20.375" PointY="4.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubMembresiasConceptoCargoAbono" Width="1.5" PointX="15.375" PointY="20.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizadosEntrenadores" Width="1.5" PointX="17.375" PointY="20.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizadosAsistencias" Width="1.5" PointX="21.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyClubModel.vAlumnosAsistencia" Width="1.5" PointX="21.375" PointY="11.75" />
+        <EntityTypeShape EntityType="MyClubModel.ClubPersonalizadosAlumnosHorarios" Width="1.5" PointX="19.375" PointY="20.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

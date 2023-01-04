@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registro Más Control</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+      @media screen and (max-width: 992px) {
+.img{
+display:none;
+}
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #f7aa00;
+    cursor: default;
+    background-color: #0090bf;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.form-group{
+  margin-left: 10px;
+    margin-right: 10px;
+}
+.btn-warning{
+  background-color: #f7aa00!important;
+}
+
+    </style>
+    <body style="background-color: rgb(238, 238, 238);">
+        <div class="container" style="padding-top: 5%;">
+            <div class="row" style="background-color: white; border-radius: 10px;">
+                <div class="col-lg-6 col-md-6 col-sm-0" style="height: 100%; border-top:none!important; padding-left:0%;">
+                <img class="img" src="images/bg-02.jpg" style="width: 100%; height: max-content">
+                
+                
+                </div>
+                <div class="col-lg-6 col-md-6" >
+                  <div class="text-center">
+                    <br>
+                    <img src="images/MasControlCLUB-v1.png">
+                    <br> 
+                     <h2 style="color: #0090bf;"><b>Registro de Alumnos</b> </h2>
+                  </div>
+                  
+                  <script>
+      
+                    window.onload = function tabs() {
+                        if (screen.width < 600) {
+                            document.getElementById("tab").className = "nav nav-tabs ";
+                         
+                     }
+                     else {
+                           document.getElementById("tab").className = "nav nav-tabs nav-justified";
+                     }
+             
+                 }
+                
+                
+                 
+         
+             
+               </script> 
+           
+          
+            <ul id="tab" class="nav nav-tabs nav-justified ">
+              <li id="homeul" class=" text-dark active" style="color: lightsalmon;"><a data-toggle="tab" href="#home"><b>Paso 1</b></a></li>
+              <li id="menu1ul" style="color: lightsalmon;"><a data-toggle="tab" href="#menu1"><b>Paso 2 </b></a></li>
+              <li id="menu2ul" style="color: lightsalmon;"><a data-toggle="tab" href="#menu2"><b>Paso 3</b></a></li>
+              <li id="menu3ul" style="color: lightsalmon;"><a data-toggle="tab" href="#menu3"><b>Paso 4</b></a></li>
+            </ul>
+          
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <br>
+                <div class="form-group">
+                  <label for="sel1">Club de interés:</label>
+                  <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="usr">Nombre:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Apellidos:</label>
+                  <input type="text" class="form-control" id="pwd">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Fecha de nacimiento:</label>
+                  <input type="date" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Subir Acta de nacimiento:</label>
+                  <input type="File" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">CURP:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Subir CURP:</label>
+                  <input type="File" class="form-control" id="usr">
+                </div>
+                <button type="button" class="btn btn-warning" style="width: 100%;" onclick="myfunction()">Siguiente Paso</button>
+              </div>
+              <script>
+                function myfunction(){
+                     document.getElementById("menu1ul").className="active";
+                     document.getElementById("homeul").className="normal";
+                     document.getElementById("menu1").className="tab-pane fade in active";
+                     document.getElementById("home").className="tab-pane fade";
+                }
+               
+            </script>
+              <div id="menu1" class="tab-pane fade">
+                <br>
+              
+                <div class="form-group">
+                  <label for="usr">NIP:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Diciplina:</label>
+                  <input type="text" class="form-control" id="pwd">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Fecha de Ingreso:</label>
+                  <input type="date" class="form-control" id="usr">
+                </div>
+               
+                <div class="form-group">
+                  <label for="usr">Nivel de ingreso:</label>
+                  <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="usr">Nivel deseado:</label>
+                  <select class="form-control" id="sel1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-warning" style="width: 100%; background-color: #f7aa00;" onclick="myfunction2()">Siguiente Paso</button>
+              </div>
+              <script>
+                function myfunction2(){
+                     document.getElementById("menu2ul").className="active";
+                     document.getElementById("menu1ul").className="normal";
+                     document.getElementById("menu2").className="tab-pane fade in active";
+                     document.getElementById("menu1").className="tab-pane fade";
+                }
+               
+            </script>
+              <div id="menu2" class="tab-pane fade">
+                <br>
+              
+                <div class="form-group">
+                  <label for="usr">Correo Electronico:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Teléfono Fijo:</label>
+                  <input type="text" class="form-control" id="pwd">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Teléfono Movil:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+               
+                <div class="form-group">
+                  <label for="usr">Institucion Educativa:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Institucion Teléfono:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Institucion Entrenador:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <button type="button" class="btn btn-warning" style="width: 100%;background-color: #f7aa00;" onclick="myfunction3()">Siguiente Paso</button>
+              </div>
+              <script>
+                function myfunction3(){
+                     document.getElementById("menu3ul").className="active";
+                     document.getElementById("menu2ul").className="normal";
+                     document.getElementById("menu3").className="tab-pane fade in active";
+                     document.getElementById("menu2").className="tab-pane fade";
+                }
+               
+            </script>
+              <div id="menu3" class="tab-pane fade">
+                <br>
+              
+                <div class="form-group">
+                  <label for="usr">Nombre del Tutor:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Teléfono Fijo del tutor:</label>
+                  <input type="text" class="form-control" id="pwd">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Teléfono Movil del tutor:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+               
+                <div class="form-group">
+                  <label for="usr">Correo Electronico del Tutor:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                  <label for="usr">Comentarios del tutor:</label>
+                  <input type="text" class="form-control" id="usr">
+                </div>
+               
+                <button type="button" class="btn btn-warning" style="width: 100%;background-color: #f7aa00;">Envíar</button>
+              </div>
+              <br>
+            </div>
+          
+                </div>
+            </div>
+         
+          </div>
+          
+    </body>
+</html>
