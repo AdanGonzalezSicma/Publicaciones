@@ -46,20 +46,26 @@
                     visibleIndex = gridCargosAbono.GetFocusedRowIndex();
                     console.log('aqui si llega');
               //      gridCargosAbono.GetRowValues(visibleIndex, 'Alumno;', getNumEncuesta);
- gridCargosAbono.GetRowValues(visibleIndex, 'Folio;Fecha;OIDAlumno;TipoCargo;TipoMovimiento;FechaDePago;Concepto;Origen;Importe;Referencia;PagoVerificado;NombreCompleto;CodigoExterno', getNumEncuesta);
+                     gridCargosAbono.GetRowValues(visibleIndex, 'Folio;Fecha;OIDAlumno;TipoCargo;TipoMovimiento;FechaDePago;Concepto;Origen;Importe;Referencia;PagoVerificado;NombreCompleto;CodigoExterno', getNumEncuesta);
              }
 
 
          }
- function OnRowToolbarItemClick(s,e) {
-                 visibleIndex = gridCargosAbono.GetFocusedRowIndex();
- gridCargosAbono.GetRowValues(visibleIndex, 'Folio;Fecha;OIDAlumno;TipoCargo;TipoMovimiento;FechaDePago;Concepto;Origen;Importe;Referencia;PagoVerificado;NombreCompleto;CodigoExterno', getValorCargoAbono);
-}
-function getValorCargoAbono(value){
-console.log(value[4])
-if(value[4]==='C')
-console.log('ACTIVAR BOTON PAGAR');
-}
+                 function OnRowToolbarItemClick(s,e) {
+                                 visibleIndex = gridCargosAbono.GetFocusedRowIndex();
+                 gridCargosAbono.GetRowValues(visibleIndex, 'Folio;Fecha;OIDAlumno;TipoCargo;TipoMovimiento;FechaDePago;Concepto;Origen;Importe;Referencia;PagoVerificado;NombreCompleto;CodigoExterno', getValorCargoAbono);
+                }
+            function getValorCargoAbono(value){
+            console.log(value[4])
+                if (value[4] == 'C') {
+                            console.log('ACTIVAR BOTON PAGAR');
+                        var customBtn = gridCargosAbono.GetToolbarByName("toolbarCargosAbono").GetItemByName("Pagar");  
+                            customBtn.SetEnabled(true);
+                        }else {
+                             var customBtn = gridCargosAbono.GetToolbarByName("toolbarCargosAbono").GetItemByName("Pagar");  
+                            customBtn.SetEnabled(false);
+                         }
+                     }
    
 
 
@@ -373,8 +379,7 @@ A.[CodigoExterno] FROM [ClubAlumnosCargosAbonos] AS A
 INNER JOIN ClubAlumnos AS B
 ON A.OIDAlumno=B.OIDAlumnos
 WHERE (A.[OIDClub] = 
-100)
---@OIDClub) 
+@OIDClub) 
 ORDER BY A.[OIDCargoAbono] DESC" InsertCommand="INSERT INTO [dbo].[ClubAlumnosCargosAbonos]
            ([OIDClub]
            ,[OIDAlumno]
@@ -518,7 +523,7 @@ ORDER BY A.[OIDCargoAbono] DESC" InsertCommand="INSERT INTO [dbo].[ClubAlumnosCa
 
                         </div>
                         <div class="col-lg-9 col-md-8 col-sm-12" style="margin-bottom:5px">
-                            <dx:ASPxTextBox ID="txtAlumno" runat="server" Width="100%"></dx:ASPxTextBox>
+                            <dx:ASPxTextBox ID="txtAlumno" runat="server" Width="100%" Enabled="False"></dx:ASPxTextBox>
                             <label id="lblidalumn" runat="server" hidden></label>
                         </div>
                     </div>
@@ -528,7 +533,7 @@ ORDER BY A.[OIDCargoAbono] DESC" InsertCommand="INSERT INTO [dbo].[ClubAlumnosCa
 
                         </div>
                         <div class="col-lg-9 col-md-8 col-sm-12">
-                            <dx:ASPxTextBox ID="txtOrigen" runat="server" Width="100%"></dx:ASPxTextBox>
+                            <dx:ASPxTextBox ID="txtOrigen" runat="server" Width="100%"  Enabled="False"></dx:ASPxTextBox>
 
                         </div>
                     </div>
@@ -539,7 +544,7 @@ ORDER BY A.[OIDCargoAbono] DESC" InsertCommand="INSERT INTO [dbo].[ClubAlumnosCa
 
                         </div>
                         <div class="col-lg-9 col-md-8 col-sm-12">
-                            <dx:ASPxTextBox ID="txtTipoMovimiento" runat="server" Width="100%"></dx:ASPxTextBox>
+                            <dx:ASPxTextBox ID="txtTipoMovimiento" runat="server" Width="100%" Enabled="False"></dx:ASPxTextBox>
 
                         </div>
                     </div>
@@ -549,7 +554,7 @@ ORDER BY A.[OIDCargoAbono] DESC" InsertCommand="INSERT INTO [dbo].[ClubAlumnosCa
 
                         </div>
                         <div class="col-lg-9 col-md-8 col-sm-12">
-                            <dx:ASPxTextBox ID="txtConcepto" runat="server" Width="100%"></dx:ASPxTextBox>
+                            <dx:ASPxTextBox ID="txtConcepto" runat="server" Width="100%"  Enabled="False"></dx:ASPxTextBox>
 
                         </div>
                     </div>

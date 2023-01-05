@@ -220,15 +220,15 @@
             <SettingsAdaptivity AdaptivityMode="SingleColumnWindowLimit"></SettingsAdaptivity>
         </EditFormLayoutProperties>
         <Columns>
-            <dx:GridViewDataTextColumn FieldName="OIDAlumnos" ReadOnly="True" VisibleIndex="2" Visible="True" Caption="No.">
+            <dx:GridViewDataTextColumn FieldName="OIDAlumnos" ReadOnly="True" VisibleIndex="2" Visible="False" Caption="No.">
                 <CellStyle HorizontalAlign="Center"></CellStyle>
                 <EditFormSettings Visible="False"></EditFormSettings>
                 <FilterCellStyle HorizontalAlign="Center"></FilterCellStyle>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="OidClub" VisibleIndex="3" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="OidUsuario" VisibleIndex="4" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="Guid" VisibleIndex="5" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="2">
+            <dx:GridViewDataTextColumn FieldName="OidClub" VisibleIndex="4" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="OidUsuario" VisibleIndex="5" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="Guid" VisibleIndex="6" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="3">
                 <PropertiesTextEdit MaxLength="50">
                     <ValidationSettings Display="Dynamic">
                         <RequiredField IsRequired="True" ErrorText="Este campo es obligatorio"></RequiredField>
@@ -242,7 +242,7 @@
                     </ValidationSettings>
                 </PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="NIP" VisibleIndex="6">
+            <dx:GridViewDataTextColumn FieldName="NIP" VisibleIndex="20">
                 <PropertiesTextEdit MaxLength="4">
                     <ValidationSettings Display="Dynamic">
                         <RequiredField IsRequired="True" ErrorText="Este campo es obligatorio"></RequiredField>
@@ -264,7 +264,7 @@
                     </ValidationSettings>
                 </PropertiesDateEdit>
             </dx:GridViewDataDateColumn>
-            <dx:GridViewDataTextColumn FieldName="CURP" VisibleIndex="9">
+            <dx:GridViewDataTextColumn FieldName="CURP" VisibleIndex="19">
                 <PropertiesTextEdit MaxLength="18">
                     <ValidationSettings Display="Dynamic">
                         <RequiredField IsRequired="True" ErrorText="Este campo es obligatorio"></RequiredField>
@@ -294,34 +294,34 @@
                     </ValidationSettings>
                 </PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="InstitucionEdicativa" VisibleIndex="19" Caption="Instituci&#243;n Educativa" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="InstitucionEdicativa" VisibleIndex="21" Caption="Instituci&#243;n Educativa" Visible="False">
                 <PropertiesTextEdit MaxLength="50"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="InstitucionTelefono" VisibleIndex="20" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="InstitucionTelefono" VisibleIndex="22" Visible="False">
                 <PropertiesTextEdit MaxLength="15"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="InstitucionEntrenador" VisibleIndex="21" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="InstitucionEntrenador" VisibleIndex="23" Visible="False">
                 <PropertiesTextEdit MaxLength="50"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TutorNombre" VisibleIndex="22" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="TutorNombre" VisibleIndex="24" Visible="False">
                 <PropertiesTextEdit MaxLength="100"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TutorTelFijo" VisibleIndex="23" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="TutorTelFijo" VisibleIndex="25" Visible="False">
                 <PropertiesTextEdit MaxLength="15"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TutorTelMovil" VisibleIndex="24" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="TutorTelMovil" VisibleIndex="26" Visible="False">
                 <PropertiesTextEdit MaxLength="15"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TutorCorreoElectronico" VisibleIndex="25" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="TutorCorreoElectronico" VisibleIndex="27" Visible="False">
                 <PropertiesTextEdit MaxLength="50"></PropertiesTextEdit>
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataCheckColumn FieldName="Activo" VisibleIndex="0"></dx:GridViewDataCheckColumn>
-            <dx:GridViewDataCheckColumn FieldName="Suspendido" VisibleIndex="31"></dx:GridViewDataCheckColumn>
-            <dx:GridViewDataDateColumn FieldName="FechaSuspendido" VisibleIndex="32" Visible="False"></dx:GridViewDataDateColumn>
-            <dx:GridViewDataTextColumn FieldName="MotivoSuspendido" VisibleIndex="33" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TipoServicioMedico" VisibleIndex="34" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="PolizaServicioMedico" VisibleIndex="35" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn FieldName="TipoPersonalizado" VisibleIndex="37" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataCheckColumn FieldName="Suspendido" VisibleIndex="32"></dx:GridViewDataCheckColumn>
+            <dx:GridViewDataDateColumn FieldName="FechaSuspendido" VisibleIndex="33" Visible="False"></dx:GridViewDataDateColumn>
+            <dx:GridViewDataTextColumn FieldName="MotivoSuspendido" VisibleIndex="34" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="TipoServicioMedico" VisibleIndex="35" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="PolizaServicioMedico" VisibleIndex="36" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="TipoPersonalizado" VisibleIndex="38" Visible="False"></dx:GridViewDataTextColumn>
             <dx:GridViewDataComboBoxColumn FieldName="OidDisciplina" Caption="Diciplina" VisibleIndex="7" Visible="False">
                 <PropertiesComboBox DataSourceID="SqlDSDisciplinas" TextField="Nombre" ValueField="OIDDiciplinas">
                     <ValidationSettings Display="Dynamic">
@@ -336,16 +336,16 @@
                 <PropertiesComboBox DataSourceID="SqlDSNiveles" TextField="Descripcion" ValueField="Oid"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn FieldName="OidNivelUltimaEvaluacion" Caption="Ultimo Nivel" Visible="False" VisibleIndex="13"></dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataTextColumn FieldName="OIDTipoAlumno" VisibleIndex="29" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataMemoColumn FieldName="ComentariosTutor" VisibleIndex="26" Visible="False">
+            <dx:GridViewDataTextColumn FieldName="OIDTipoAlumno" VisibleIndex="31" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataMemoColumn FieldName="ComentariosTutor" VisibleIndex="28" Visible="False">
                 <PropertiesMemoEdit Rows="3"></PropertiesMemoEdit>
             </dx:GridViewDataMemoColumn>
-            <dx:GridViewDataTextColumn FieldName="TipoDisciplina" VisibleIndex="36" Visible="False"></dx:GridViewDataTextColumn>
-            <dx:GridViewDataMemoColumn FieldName="AnotacionesDisciplinaClub" Visible="False" VisibleIndex="27"></dx:GridViewDataMemoColumn>
-            <dx:GridViewDataMemoColumn FieldName="AnotacionesGeneralesClub" Visible="False" VisibleIndex="28">
+            <dx:GridViewDataTextColumn FieldName="TipoDisciplina" VisibleIndex="37" Visible="False"></dx:GridViewDataTextColumn>
+            <dx:GridViewDataMemoColumn FieldName="AnotacionesDisciplinaClub" Visible="False" VisibleIndex="29"></dx:GridViewDataMemoColumn>
+            <dx:GridViewDataMemoColumn FieldName="AnotacionesGeneralesClub" Visible="False" VisibleIndex="30">
                 <PropertiesMemoEdit Rows="3"></PropertiesMemoEdit>
             </dx:GridViewDataMemoColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="Sexo" Caption="G&#233;nero" VisibleIndex="38">
+            <dx:GridViewDataComboBoxColumn FieldName="Sexo" Caption="G&#233;nero" VisibleIndex="9">
                 <PropertiesComboBox NullText="Seleccione su g&#233;nero">
                     <Items>
                         <dx:ListEditItem Text="Masculino" Value="1"></dx:ListEditItem>

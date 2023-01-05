@@ -46,6 +46,10 @@
             popupSuspender.Hide();
         }
         function OnToolbarItemClick(s, e) {
+            if (e.item.name=="btnAplicarCargos") {
+                popupPagar.Show();
+            }
+            
             if (e.item.name=="btnNuevo") {
                 popupNuevo.Show();
             }
@@ -656,6 +660,55 @@ where Oid = @Oid">
             <asp:SessionParameter SessionField="OIDEmpresa" Name="OIDEmpresa" Type="Int32"></asp:SessionParameter>
         </SelectParameters>
     </asp:SqlDataSource>
+
+     <dx:ASPxPopupControl
+        ID="popupPagar"
+        ClientInstanceName="popupPagar"
+        runat="server"
+        Modal="true"
+        CloseOnEscape="true" 
+        PopupHorizontalAlign="WindowCenter"
+        PopupVerticalAlign="WindowCenter" Font-Bold="False"  Width="550px" HeaderText="¡Advertencia!">
+        <ContentStyle Paddings-Padding="0" Paddings-PaddingTop="12" >
+<Paddings Padding="0px" PaddingTop="12px"></Paddings>
+        </ContentStyle>
+        <SettingsAdaptivity MinHeight="10%" MinWidth="40%" Mode="Always" VerticalAlign="WindowCenter" />
+        <HeaderStyle Font-Bold="True" ForeColor="White" Border-BorderStyle="None" BackColor="#f7aa00" />
+        <ContentCollection>
+            <dx:PopupControlContentControl>
+                <div class="container-fluid" style="padding: 10px">
+
+                    <div class="row" style="margin-bottom:5px">
+                        <div class="col-12">
+                            <asp:Label ID="lblTxtMensaje" runat="server" Text="¿Están seguros de realizar la aplicación?"></asp:Label></div>
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-12">
+                            <div class="buttonsContainer">
+                              
+                                <%--<asp:Button ID="btnConfirmar" runat="server" Text="Button" OnClick="btnConfirmar_Click" OnClientClick="function (s, e) { popupPagar.Hide(); }"  BackColor="#FF3547" ForeColor="White" CssClass="btn btn-danger fondo"  Width="100"/>--%>
+                                <asp:ImageButton   ID="btnConfirmar23" runat="server" Text="Button" OnClick="btnConfirmar23_Click" OnClientClick="function (s, e) { popupPagar.Hide(); }" CssClass="btn"  Width="60px" ImageUrl="/Content/iconos/save.png" ToolTip="Guardar" />
+                                <dx:ASPxButton ID="btnCancelarPagar" runat="server" AutoPostBack="false" Width="50" BackColor="White" ForeColor="#FF3547" CssClass="btn-danger">
+                                    <ClientSideEvents Click="fncCancelarPagar" />
+                                      <Image AlternateText="Cancelar" Height="32px" ToolTip="Cancelar" Url="~/Content/iconos/cancel2.png" Width="32px">
+                                </Image>
+                                   
+                                </dx:ASPxButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </dx:PopupControlContentControl>
+        </ContentCollection>
+    </dx:ASPxPopupControl>
+
+
 
     <dx:ASPxPopupControl
         ID="popupBaja" Modal="true"
